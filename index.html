@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-6 text-center text-sm-right cabinet">
-          <i class="icon-user-add"><a href="#" data-toggle="modal" data-target="#registration"> данные пользователя</a></i>
+          <i class="icon-user-add"><a href="#" data-toggle="modal" data-target="#registration">данные пользователя</a></i>
           <!--          <img src="/images/opera_2019-12-04_21-59-08.png" alt="social" height="20"/>-->
         </div>
       </div>
@@ -46,6 +46,99 @@
       <div class="modal-body">
 
         <form id="auth-reg-form">
+
+          <!--          toasts-->
+          <div class="toast registration-succes fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+              <i class="icon-thumbs-up mr-2 badge-primary rounded"></i>
+              <strong class="mr-auto">Server</strong>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">
+              Регистрация прошла успешно
+            </div>
+          </div>
+
+          <div class="toast autorization-succes fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+              <i class="icon-thumbs-up mr-2 badge-primary rounded"></i>
+              <strong class="mr-auto">Server</strong>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">
+              Вы авторизированы
+            </div>
+          </div>
+
+          <div class="toast recovery-send fade hide mx-auto" data-delay="5000" role="alert" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+              <i class="icon-thumbs-up mr-2 badge-info rounded"></i>
+              <strong class="mr-auto">Server</strong>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">
+              Данные отправлены на почтовый ящик. Проверьте пожалуйста вашу почту
+            </div>
+          </div>
+
+          <div class="toast autorization-error fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+              <i class="icon-error-alt mr-2 badge-danger rounded"></i>
+              <strong class="mr-auto">Server</strong>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">
+              Ошибка авторизации. Пользователя с таким email не существует
+            </div>
+          </div>
+
+          <div class="toast autorization2-error fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+              <i class="icon-error-alt mr-2 badge-danger rounded"></i>
+              <strong class="mr-auto">Server</strong>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">
+              Ошибка авторизации. Неправильный email или пароль
+            </div>
+          </div>
+
+          <div class="toast registration-error fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+              <i class="icon-error-alt mr-2 badge-danger rounded"></i>
+              <strong class="mr-auto">Server</strong>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">
+              Ошибка регистрации. Пользователь с таким email уже существует
+            </div>
+          </div>
+
+          <div class="toast registration2-error fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+              <i class="icon-error-alt mr-2 badge-danger rounded"></i>
+              <strong class="mr-auto">Server</strong>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">
+              Ошибка регистрации. Не удалось связаться с сервером
+            </div>
+          </div>
+
           <div class="form-row align-items-center">
 
             <div class="col-sm-6">
@@ -57,7 +150,7 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text"><i class="icon-at"></i></div>
                 </div>
-                <input type="email" class="form-control" class="form-control" id="inlineFormInputGroupEmail" placeholder="Email" required aria-describedby="emailHelpBlock">
+                <input type="email" class="form-control" id="inlineFormInputGroupEmail" placeholder="Email" required aria-describedby="emailHelpBlock">
               </div>
             </div>
 
@@ -70,14 +163,14 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text"><i class="icon-user"></i></div>
                 </div>
-                <input type="text" class="form-control" class="form-control" id="inlineFormInputGroupName" placeholder="Jonh Smith" minlength="2" aria-describedby="nameHelpBlock">
+                <input type="text" class="form-control" id="inlineFormInputGroupName" placeholder="Jonh Smith" minlength="2" aria-describedby="nameHelpBlock">
               </div>
             </div>
 
             <div class="col-12 for-registration d-none">
               <label class="sr-only" for="inlineFormInputGroupPhone">Phone</label>
               <small id="phoneHelpBlock" class="form-text text-muted">
-                Введите ваш номер телефона в формате +375 33 1234567 (необ)
+                Введите ваш номер телефона в формате +375 33 1234567
               </small>
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
@@ -105,20 +198,27 @@
               <input type="password" class="form-control mb-2" id="inlineFormInputPswd2" placeholder="Пароль" minlength="4" aria-describedby="pswdHelpBlock2">
             </div>
 
-            <div class="col-12 for-registration d-none">
+            <div class="col-12 recovery-pswd">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="recovery-pswd">
+                <label class="form-check-label" for="recovery-pswd">
+                  Вспомнить пароль
+                </label>
+              </div>
+            </div>
 
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" checked="checked" id="Check">
-                <label class="form-check-label" for="Check">
+            <div class="col-12 for-registration d-none">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" checked="checked" id="subscribe">
+                <label class="form-check-label" for="subscribe">
                   Подписаться на наши новости и обновления товаров
                 </label>
               </div>
-
             </div>
 
-
             <div class="col-sm-6">
-              <button type="submit" class="btn btn-danger mt-3" data-toggle="tooltip" data-placement="bottom" title="Заполните все поля правильно">
+              <button type="submit" class="btn btn-danger mt-3" data-toggle="tooltip" data-placement="bottom" id="submit-btn" title="Заполните все поля правильно">
+                <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
                 Отправить данные
               </button>
             </div>
@@ -130,6 +230,7 @@
             </div>
 
           </div>
+
         </form>
       </div>
       <div class="modal-footer">
@@ -173,6 +274,12 @@
       <img src="/images/cart2-sm.png" class="d-inline-block align-top" alt="oak">
       <span class="badge badge-success badge-pill">5</span>
     </a>
+    <!--    <a class="navbar-brand"-->
+    <!--       data-target="#">-->
+    <!--      <i class="icon-user-add"></i>-->
+    <!--&lt;!&ndash;      <span class="d-none d-sm-inline d-xl-block px-1">Sign Up</span>&ndash;&gt;-->
+    <!--    </a>-->
+
   </div>
 </nav>
 
@@ -347,5 +454,5 @@
   <h5 class="text-center py-5"><i class="icon-copyright">2020</i></h5>
 </footer>
 
-<script type="text/javascript" src="/5f2284b13ade48e30eba.bundle.js"></script></body>
+<script type="text/javascript" src="/da80255875771e178728.bundle.js"></script></body>
 </html>
