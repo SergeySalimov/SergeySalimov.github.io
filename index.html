@@ -21,7 +21,8 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-6 text-center text-sm-right cabinet">
-          <i class="icon-user-add"><a href="#" data-toggle="modal" data-target="#registration">данные пользователя</a></i>
+          <i class="icon-user-add"><a href="#" data-toggle="modal" data-target="#registration">данные
+            пользователя</a></i>
           <!--          <img src="/images/opera_2019-12-04_21-59-08.png" alt="social" height="20"/>-->
         </div>
       </div>
@@ -33,7 +34,7 @@
 <!--  <div class="d-inline p-2 bg-dark text-white">d-inline</div>-->
 <!--</div>-->
 
-<!-- Modal -->
+<!-- Modal Registration-->
 <div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -272,7 +273,7 @@
     </div>
     <a class="navbar-brand no-autoriz basket" data-toggle="tooltip" data-placement="bottom" title="Необходима регистрация">
       <img src="/images/cart2-sm.png" class="d-inline-block align-top" alt="oak">
-      <span class="badge badge-success badge-pill">5</span>
+      <span class="badge badge-success badge-pill basket-count">0</span>
     </a>
     <!--    <a class="navbar-brand"-->
     <!--       data-target="#">-->
@@ -376,30 +377,64 @@
     </div>
   </div>
   <!-- Modal -->
-  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLarge" aria-hidden="true">
+  <div class="modal fade bd-example-modal-lg" id="basket-modal" tabindex="-1" role="dialog" aria-labelledby="basket-modal-content" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        ...
-      </div>
-    </div>
-  </div>
-  <!-- Modal -->
-  <div class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-modal="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="basket-modal-content">Корзина: <span id="basket-item-number">0</span></h5>
+
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          ...
+
+          <div class="toast clear-basket fade hide mx-auto" data-delay="1500" role="alert" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+              <i class="icon-shopping-basket mr-2 badge-primary rounded"></i>
+              <strong class="mr-auto">Basket</strong>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">
+              Корзина очищена
+            </div>
+          </div>
+
+          <div class="toast send-basket fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true">
+            <div class="toast-header">
+              <i class="icon-shopping-basket mr-2 badge-primary rounded"></i>
+              <strong class="mr-auto">Basket</strong>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">
+              Ваш заказ отправлен
+            </div>
+          </div>
+
+          <h6>Список выбранных товаров:</h6>
+          <div id="basket-render-place">
+            <h4 class="alert text-center mt-5">Пусто</h4>
+            <ol>
+
+                          <li>Шишки</li>
+              <!--            <li>Шишки</li>-->
+              <!--            <li>Шишки</li>-->
+              <!--            <li>Шишки</li>-->
+            </ol>
+          </div>
+
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-danger" id="clear-basket">Clear</button>
+          <button type="button" class="btn btn-primary" id="send-basket">Отправить данные</button>
         </div>
+
       </div>
     </div>
   </div>
@@ -454,5 +489,5 @@
   <h5 class="text-center py-5"><i class="icon-copyright">2020</i></h5>
 </footer>
 
-<script type="text/javascript" src="/da80255875771e178728.bundle.js"></script></body>
+<script type="text/javascript" src="/277a7d3380af3fce0a7b.bundle.js"></script></body>
 </html>
