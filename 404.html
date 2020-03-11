@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>404</title>
+</head>
+<body>
+
+<script>
+  const path = window.location.pathname.slice(1);
+  console.log(window.localStorage.pathname);
+  console.log(path);
+  localStorage.setItem('pathOfSite', path);
+  window.location.href = '../';
+</script>
+</body>
+</html>
