@@ -8,9 +8,8 @@
 
 <script>
   const path = window.location.pathname.slice(1);
-  console.log(window.localStorage.pathname);
-  console.log(path);
   localStorage.setItem('pathOfSite', path);
+  localStorage.setItem('pathOfSiteFull', window.location.pathname);
   window.location.href = '../';
 </script>
 </body>
