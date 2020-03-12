@@ -220,8 +220,6 @@
 
 // console.dir(this.catalogRoutes);
 
-// console.log(url);
-
 // const temp = url.split('/')[1];
 
 // create a fake namespace object
