@@ -214,7 +214,7 @@
 
 // addCatalogBreadcrum(data) {
 
-// api: 'https://my-json-server.typicode.com/SergeySalimov/FE2-project',
+// api: 'http://localhost:3007',
 
 // basket listener !!!! here change to fast access to basket
 
