@@ -140,6 +140,10 @@
 
 /* 72 */
 
+/* 73 */
+
+/* 74 */
+
 /* 8 */
 
 /* 9 */
@@ -188,6 +192,8 @@
 
 // Flag the module as loaded
 
+// Form work!!
+
 // MVC model
 
 // Object.prototype.hasOwnProperty.call
@@ -208,7 +214,7 @@
 
 // addCatalogBreadcrum(data) {
 
-// api: 'http://localhost:3007',
+// api: 'https://my-json-server.typicode.com/SergeySalimov/FE2-project',
 
 // basket listener !!!! here change to fast access to basket
 
@@ -314,9 +320,9 @@
 
 // }
 
-//ToDO Сделать обработку на event 'prdClk'
+//ToDO Разбить на функции, слишком сложно
 
-//ToDo сдеалть одну функцию
+//ToDO Сделать обработку на event 'prdClk'
 
 //broadcast block
 
