@@ -1,0 +1,821 @@
+// Important !!! верстка Mobile First: XS - телефон, SM - планшет - перевернутыЙ телефон, MD - планшет - небоьшой монитор,
+// LG - монитор - широкий экран
+//
+// import Font Roboto
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
+// Custom.scss
+// Option A: Include all of Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "variables", "mixins";
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#mainNavbar {
+  @media (min-width: map-get($grid-breakpoints, "md")) {
+    .abs-center-x {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+
+
+  // Логотип на навигации
+  #nav-bar-logo {
+    //@media (min-width: 1500px) {
+    //  padding-left: 400px;
+    //}
+    color: $mainFontColorComplement;
+    a {
+      border-left: transparent;
+    }
+  }
+  // Все остальные элементы
+  a:nth-child(1) {
+
+    border-bottom: solid 1px white;
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+      border-left: solid 1px white;
+      border-bottom: transparent;
+    }
+
+  }
+  // Первый элемент списка
+  #first-nav-element {
+
+    border-left: transparent;
+    //border-top: solid 1px white;
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+      border-top: transparent;
+      border-left: solid 1px white;
+    }
+
+    //@media (min-width: map-get($grid-breakpoints, "md")) {
+    //  padding-left: 50px;
+    //}
+    //@media (min-width: map-get($grid-breakpoints, "lg")) {
+    //  padding-left: 200px;
+    //}
+    //@media (min-width: 1500px) {
+    //  padding-left: 100px;
+    //}
+  }
+  a {
+    font-size: $mediumFontSize + 1;
+
+  }
+}
+
+.first-section {
+  // Common properties
+  background: url('../img/header-bg.jpg');
+  background-size: cover;
+  padding: $basePaddingTopXs 0;
+  color: $mainFontColor;
+
+  header {
+
+    // properties for all <a> in header-bottom
+    .header-bottom {
+      a {
+        color: $mainFontColor;
+        &:hover {
+          text-decoration: none;
+          //box-shadow: 0 0 5px 5px rgba(179, 179, 179, 0.8);
+          //background-color: rgba(179, 179, 179, 0.5);
+        }
+        &:first-child {
+          display: block;
+        }
+      }
+      // Logo block properties
+      .logo {
+        display: block;
+        text-align: center;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          text-align: left;
+        }
+        a {
+          font-size: 30px;
+          min-width: 152px;
+          font-weight: 400;
+          &:hover {
+            color: $mainFontColor;
+          }
+        }
+        span {
+          vertical-align: middle;
+          letter-spacing: $letterSpaceStandart;
+          font-weight: 600;
+        }
+        p {
+          //width: 100%;
+          font-size: $smallFontSizeSm;
+          @media (min-width: map-get($grid-breakpoints, "md")) {
+            font-size: $smallFontSizeMd;
+          }
+
+          font-weight: 300;
+        }
+      }
+      // Get a call block properties
+      .get-a-call {
+        //display: block;
+        text-transform: uppercase;
+        font-size: $mediumFontSize;
+        font-weight: 600;
+        letter-spacing: $letterSpaceStandart;
+        text-align: center;
+        padding-top: 0;
+        vertical-align: middle;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          padding-top: $basePaddingTopSm;
+        }
+        a {
+          min-width: ($mediumFontSize * 11) + $radiusOfPhoneCallingIconSvg + 22px;
+          svg {
+            width: 25px;
+            height: 25px;
+
+            // hover on <a> && <svg>
+            &:hover {
+
+            }
+          }
+          &:hover {
+            svg {
+              box-shadow: 0 0 0 $radiusOfPhoneCallingIconSvg #ffac00;
+              background: $mainFontColor2;
+              border-radius: 50% 50%;
+              fill: #fff;
+              animation: tel .8s ease-in infinite;
+              @keyframes tel {
+                45% {
+                  transform: rotate(-0.1turn)
+                }
+                45% {
+                  transform: rotate(0.2turn)
+                }
+              }
+            }
+            color: $mainFontColor2;
+          }
+          span {
+            padding-left: $radiusOfPhoneCallingIconSvg - 2;
+          }
+        }
+      }
+      // Contact information block properies
+      .contact-information {
+        display: block;
+        text-align: center;
+
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          text-align: end;
+          min-width: 160px;
+        }
+        p {
+          font-size: $smallFontSizeMd+1;
+          margin-top: 8px;
+          margin-bottom: 0;
+        }
+        a {
+          letter-spacing: $letterSpaceStandart - 0.1px;
+          font-weight: bold;
+          font-size: $mediumFontSize;
+          &:hover {
+            color: $mainFontColor2;
+          }
+        }
+      }
+    }
+  }
+  main {
+    padding-top: 3px;
+    @media (min-width: map-get($grid-breakpoints, "sm")) {
+      padding-top: $basePaddingTopSm;
+    }
+    h1 {
+      font-weight: 100;
+      b {
+        font-weight: 600;
+      }
+      display: block;
+      line-height: 1.2;
+      text-align: center;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        text-align: left;
+      }
+      @include fontSizeResponsiveXsSmMd;
+
+      padding-left: $basePadding;
+      letter-spacing: $letterSpaceStandart;
+      border-left: 18px solid transparent;
+      border-image: url("../img/h1.png");
+      border-image-slice: 29;
+      border-image-repeat: round;
+      span {
+        @include fontSizeResponsiveXsSmMd(-8);
+        padding-left: 20px;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          padding-left: 50px;
+        }
+      }
+    }
+    p {
+      @include pCoolStyle ();
+    }
+    .header-link-bottom {
+      display: none;
+      padding-left: 0;
+      @media (min-width: map-get($grid-breakpoints, "md")) {
+        display: block;
+        padding-top: 244px;
+        padding-left: 18px;
+        transform: rotate(-270deg);
+      }
+    }
+
+    .header-section-form {
+      padding: 5px 5px;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        padding: $basePaddingTopXs $basePadding;
+      }
+      text-align: center;
+      min-width: 270px;
+      font-weight: 300;
+      display: block;
+      background-color: rgba(179, 179, 179, 0.5);
+      border-radius: 20px;
+
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        text-align: right;
+        max-width: 400px;
+      }
+      h3 {
+        font-weight: 400;
+        font-size: $bigFontSizeSm;
+        border-right: 18px solid transparent;
+        border-image: url("../img/header-form.png");
+        border-image-slice: 28;
+        border-image-repeat: round;
+        padding-right: $basePadding;
+        margin-right: 10px;
+
+      }
+
+      h5 {
+        padding: 3px $basePadding;
+        font-weight: 100;
+        letter-spacing: $letterSpaceStandart - 0.1px;
+        line-height: 1.5;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          font-size: $mediumFontSizeSm;
+        }
+        font-size: $mediumFontSizeXs;
+      }
+      form {
+        font-size: $mediumFontSize + 7px;
+        font-weight: 400;
+
+        select, input[type=phone] {
+          //font-size: $mediumFontSizeSm;
+          font-weight: 100;
+          letter-spacing: $letterSpaceStandart;
+        }
+        select, input {
+          border-radius: 20px;
+        }
+        input[type=phone] {
+          text-align: left;
+        }
+        small {
+          font-size: $mediumFontSizeSm;
+        }
+        ::placeholder {
+          @include placeholderStyle ();
+        }
+        select {
+          font-size: $mediumFontSize;
+          option {
+            font-weight: 100;
+            line-height: 1.2;
+          }
+        }
+        button {
+          font-weight: 400;
+          color: white;
+          letter-spacing: 1.1px;
+          border-radius: 20px;
+          @include boxShadowStandart ();
+        }
+      }
+    }
+  }
+}
+
+.second-section {
+  background: url('../img/filter-bg.jpg');
+  background-size: cover;
+  @include marginBetweenSection();
+  .second-section-header {
+    background-color: white;
+    & > div {
+      text-align: center;
+      padding: 2px 3px;
+
+      svg {
+
+        width: $svgSizeXs;
+        height: $svgSizeXs;
+        & + span {
+          font-weight: 400;
+          display: block;
+          padding-top: 10px;
+          font-size: $smallFontSizeSm;
+          line-height: 120%;
+          word-break: keep-all;
+        }
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          width: $svgSizeSm;
+          height: $svgSizeSm;
+          & + span {
+            font-size: $mediumFontSizeSm;
+            text-transform: uppercase;
+            color: $additionalFontColor;
+            padding-top: 15px;
+          }
+        }
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          width: $svgSizeMd;
+          height: $svgSizeMd;
+          & + span {
+            font-size: $mediumFontSize;
+            font-weight: 600;
+            padding-top: 20px;
+            line-height: 140%;
+            color: $additionalFontColor2;
+          }
+        }
+      }
+    }
+  }
+  .second-section-main {
+    @include marginInsideSection ();
+
+    .second-section-h2 {
+      @include textOnHeadOfSectionWithImg ();
+    }
+    .second-section-navigation {
+      @include marginInsideSection ();
+      border-left: solid 1px black;
+      border-right: solid 1px black;
+      .list-group {
+        margin: 0 3px 5px 3px;
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          margin: 7px auto;
+        }
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          margin: 0 7px 10px 7px;
+        }
+        li {
+          background-color: transparent;
+          font-size: $mediumFontSize;
+          color: $additionalFontColor;
+          font-weight: 600;
+          @include textAlingXsLeftSmCenter ();
+        }
+        a {
+          font-size: $mediumFontSize + 2;
+          font-weight: 300;
+          @include textAlingXsLeftSmCenter ();
+
+        }
+      }
+    }
+    .second-section-carts {
+      margin-bottom: 10px;
+      .tab-pane {
+        .card {
+
+          .form-group {
+            ::placeholder {
+              @include placeholderStyle ();
+            }
+            button {
+              text-transform: uppercase;
+              font-size: $mediumFontSize;
+              font-weight: 500;
+            }
+          }
+          margin: 3px auto;
+
+          @media (min-width: map-get($grid-breakpoints, "md")) {
+            margin: 6px 2px;
+            // выравнивание по центру
+            //margin: 6px auto;
+
+
+          }
+
+          max-width: $cardWidthMaxXs;
+          min-width: $cardWidthMin;
+          @media (min-width: map-get($grid-breakpoints, "sm")) {
+            max-width: $cardWidthMaxSm;
+          }
+          @media (min-width: map-get($grid-breakpoints, "sm")) {
+            max-width: $cardWidthMaxLg;
+          }
+          img {
+            margin-bottom: -10px;
+          }
+          .card-body {
+            h5 {
+              font-size: $mediumFontSize + 1;
+            }
+            &:first-of-type {
+              height: 50px;
+            }
+            &:last-of-type {
+              height: 70px;
+            }
+
+          }
+          ul {
+            li {
+              font-size: $mediumFontSizeSm - 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#quality-section {
+  background: url('../img/quality-bg.jpg');
+  @include sectionTopStyle ();
+  .quality-section-main {
+    @include textOnSectionHead ();
+  }
+  .quality-section-navigation {
+    @include marginInsideSection ();
+    .list-group {
+      .list-group-item.active {
+        color: $mainFontColor;
+        font-weight: 600;
+        @include fontSizeResponsiveXsSmMd(0, $mediumFontSizeXs, $mediumFontSizeSm, $mediumFontSize)
+      }
+      a {
+        &:hover {
+          color: $mainFontColor2;
+        }
+        @include fontSizeResponsiveXsSmMd(1, $mediumFontSizeXs, $mediumFontSizeSm, $mediumFontSize);
+        background-color: transparent;
+        border: transparent;
+        color: $additionalFontColor;
+        font-weight: 400;
+      }
+    }
+    .tab-content {
+
+      .card {
+        background-color: transparent;
+        border: transparent;
+        .card-body {
+          border-left: solid 1px black;
+          .card-text {
+            font-weight: 100;
+            b {
+              font-weight: 600;
+            }
+            @include fontSizeResponsiveXsSmMd(0, $mediumFontSizeXs, $mediumFontSizeSm, $mediumFontSize);
+          }
+          .card-title {
+            @include fontSizeResponsiveXsSmMd(-4);
+            @include marginInsideSection();
+            color: $mainFontColor2;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+#reviews-section {
+  background: url('../img/production-right.png');
+  @include sectionTopStyle ();
+  .reviews-section-main {
+    h2 {
+      @include textOnHeadOfSectionWithImg (100);
+    }
+  }
+  .reviews-section-navigation {
+    @include marginBetweenSection;
+
+    .accordion {
+      .card {
+        background-color: transparent;
+        border: transparent;
+        .card-header {
+          h5 {
+            button {
+              &.btn.btn-link:hover {
+                color: $mainFontColor2;
+              }
+              &[aria-expanded=true] {
+                color: $mainFontColor;
+                font-weight: 600;
+              }
+              &[aria-expanded=false] {
+                color: $additionalFontColor;
+              }
+            }
+          }
+        }
+        .card-body {
+          border-left: solid 1px $mainFontColor;
+          p {
+            @include pNormStyle ();
+          }
+          h5 {
+            font-size: $mediumFontSize;
+            font-weight: 600;
+            color: $mainFontColor2;
+          }
+
+          img {
+            width: 100px;
+            height: 100px;
+            @media (min-width: map-get($grid-breakpoints, "md")) and (max-width: map-get($grid-breakpoints, "lg")) {
+              width: 75px;
+              height: 75px;
+            }
+          }
+          .video {
+            margin: 5px auto;
+            iframe {
+              @include videoSizing(0.5);
+              @media (min-width: map-get($grid-breakpoints, "sm")) {
+                @include videoSizing(0.95);
+              }
+              @media (min-width: map-get($grid-breakpoints, "md")) {
+                @include videoSizing(0.8);
+              }
+              @media (min-width: map-get($grid-breakpoints, "lg")) {
+                @include videoSizing(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#production-photo-section {
+  //background-image: url('../img/production-left.png'), url('../img/production-right.png');
+  //background-position: left bottom, right top;
+  //background-repeat: no-repeat, no-repeat;
+  background: url('../img/reviews-bg.png');
+  @include sectionTopStyle ();
+  .production-section-main {
+    @include textOnSectionHead ();
+
+  }
+  #production-carousel {
+    @include paddingBetweenSection ();
+    li {
+      &.active {
+        background-color: $mainFontColorComplement;
+      }
+      background-color: $additionalFontColor2;
+    }
+    .carousel-control-next, .carousel-control-prev {
+      color: $mainFontColor;
+    }
+  }
+}
+
+#contact-section {
+  background: url('../img/question-bg.jpg');
+  @include sectionTopStyle ();
+  .contact-section-header {
+    @include textOnSectionHead ();
+  }
+  .contact-section-main {
+    .map {
+      iframe {
+        //width: 423px;
+        //height: 325px;
+        @include mapSizing(0.35);
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          @include mapSizing(0.3);
+        }
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          @include mapSizing(0.4);
+        }
+        @media (min-width: map-get($grid-breakpoints, "lg")) {
+          @include mapSizing(0.7);
+        }
+      }
+    }
+
+    .card {
+      background: transparent;
+      border: transparent;
+
+      .card-body {
+
+        h5 {
+          @include fontSizeResponsiveXsSmMd (0, $bigFontSizeSm - 12, $bigFontSizeSm - 12, $bigFontSizeSm - 6);
+        }
+        ul {
+          list-style: none;
+          padding-left: $basePadding - 10;
+          li {
+            &:first-child {
+              padding-bottom: $basePadding;
+            }
+            &:last-child {
+              padding-top: $basePadding;
+            }
+            font-size: $mediumFontSizeSm;
+            i {
+              font-size: $mediumFontSize;
+            }
+            a {
+              padding-left: 5px;
+              color: $mainFontColor;
+              &:hover {
+                color: $mainFontColor2;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+  .contact-section-footer {
+    background-color: $additionalFontColor;
+    padding-top: $basePadding - 5;
+    .social-block {
+      ul {
+        list-style: none;
+        li {
+          display: inline-block;
+          font-size: $bigFontSizeXs - 4;
+          transition: color 0.25s;
+          &:hover {
+            color: $mainFontColorComplement;
+            transform: scale(1.2, 1.2);
+          }
+        }
+      }
+
+      display: inline-block;
+    }
+    .rights-reserved {
+      font-size: $mediumFontSizeXs;
+      opacity: 0.7;
+    }
+
+    a {
+      color: $mainFontColor;
+      &:hover {
+        text-decoration: none;
+        //box-shadow: 0 0 5px 5px rgba(179, 179, 179, 0.8);
+        //background-color: rgba(179, 179, 179, 0.5);
+      }
+      &:first-child {
+        display: block;
+      }
+    }
+    // Logo block properties
+    .logo {
+      display: block;
+      text-align: center;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        text-align: left;
+      }
+      a {
+        font-size: 30px;
+        min-width: 152px;
+        font-weight: 400;
+        &:hover {
+          color: $mainFontColor;
+        }
+      }
+      span {
+        vertical-align: middle;
+        letter-spacing: $letterSpaceStandart;
+        font-weight: 600;
+      }
+      p {
+        //width: 100%;
+        font-size: $smallFontSizeSm;
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+          font-size: $smallFontSizeMd;
+        }
+
+        font-weight: 300;
+      }
+    }
+    // Get a call block properties
+    .get-a-call {
+      //display: block;
+      text-transform: uppercase;
+      font-size: $mediumFontSize;
+      font-weight: 600;
+      letter-spacing: $letterSpaceStandart;
+      text-align: center;
+      padding-top: 0;
+      vertical-align: middle;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        padding-top: $basePaddingTopSm;
+      }
+      a {
+        min-width: ($mediumFontSize * 11) + $radiusOfPhoneCallingIconSvg + 22px;
+        svg {
+          width: 25px;
+          height: 25px;
+
+          // hover on <a> && <svg>
+          &:hover {
+
+          }
+        }
+        &:hover {
+          svg {
+            box-shadow: 0 0 0 $radiusOfPhoneCallingIconSvg #ffac00;
+            background: $mainFontColor2;
+            border-radius: 50% 50%;
+            fill: #fff;
+            animation: tel .8s ease-in infinite;
+            @keyframes tel {
+              45% {
+                transform: rotate(-0.1turn)
+              }
+              45% {
+                transform: rotate(0.2turn)
+              }
+            }
+          }
+          color: $mainFontColor2;
+        }
+        span {
+          padding-left: $radiusOfPhoneCallingIconSvg - 2;
+        }
+      }
+    }
+    // Contact information block properies
+    .contact-information {
+      display: block;
+      text-align: center;
+
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        text-align: end;
+        min-width: 160px;
+      }
+      p {
+        font-size: $smallFontSizeMd+1;
+        margin-top: 8px;
+        margin-bottom: 0;
+      }
+      a {
+        letter-spacing: $letterSpaceStandart - 0.1px;
+        font-weight: bold;
+        font-size: $mediumFontSize;
+        &:hover {
+          color: $mainFontColor2;
+        }
+      }
+    }
+  }
+}
+
+#button-up {
+  font-size: $buttonUpSize;
+  font-weigh: 600;
+  background-color: $additionalFontColor2;
+  border: solid 1.5px $additionalFontColor;
+  border-radius: 50% 50%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: opacity 0.5s ;
+  &:hover {
+    background-color: $mainFontColor2;
+    color: $mainFontColorComplement;
+    font-weigh: 800;
+  }
+}
+
+

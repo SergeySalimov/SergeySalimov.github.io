@@ -1,1 +1,1931 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Сайт-витрина Плоды, травы, мох и многое другое</title><meta name="description" content="Project by Salimau Siarhei // "><meta name="author" content="Sergey Salimov"><meta name="keywords" content="дары леса, дары, лес, шишки, cone"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><!--  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">--><link href="/main.css" rel="stylesheet"></head><body><header><div class="py-2 top-line"><div class="container"><div class="row"><div class="col-xs-12 col-sm-6"><div class="mobile-number text-center text-sm-left"><i class="icon-mobile"><a href="tel:+375291234567">+375 29 123-45-67</a></i></div></div><div class="col-xs-12 col-sm-6 text-center text-sm-right cabinet"><i class="icon-user-add"><a href="#" data-toggle="modal" data-target="#registration">данные пользователя</a></i><!--          <img src="/images/opera_2019-12-04_21-59-08.png" alt="social" height="20"/>--></div></div></div></div></header><!--<div style="margin: 0 140px;" class="some-div">--><!--  <div class="d-inline p-2 bg-primary text-white">d-inline</div>--><!--  <div class="d-inline p-2 bg-dark text-white">d-inline</div>--><!--</div>--> <button type="button" class="btn btn-dark scroll-up-top fixed-bottom fade"><i class="icon-up-open"></i></button> <button type="button" class="btn btn-dark scroll-up-nav fixed-bottom fade"><i class="icon-angle-double-up"></i></button><!-- Modal Registration--><div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="ModalLabel">Пользовательские данные</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><form id="auth-reg-form"><!--          toasts--><div class="toast registration-succes fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true"><div class="toast-header"><i class="icon-thumbs-up mr-2 badge-primary rounded"></i> <strong class="mr-auto">Server</strong> <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="toast-body">Регистрация прошла успешно</div></div><div class="toast autorization-succes fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true"><div class="toast-header"><i class="icon-thumbs-up mr-2 badge-primary rounded"></i> <strong class="mr-auto">Server</strong> <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="toast-body">Вы авторизированы</div></div><div class="toast recovery-send fade hide mx-auto" data-delay="5000" role="alert" aria-live="polite" aria-atomic="true"><div class="toast-header"><i class="icon-thumbs-up mr-2 badge-info rounded"></i> <strong class="mr-auto">Server</strong> <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="toast-body">Данные отправлены на почтовый ящик. Проверьте пожалуйста вашу почту</div></div><div class="toast autorization-error fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true"><div class="toast-header"><i class="icon-error-alt mr-2 badge-danger rounded"></i> <strong class="mr-auto">Server</strong> <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="toast-body">Ошибка авторизации. Пользователя с таким email не существует</div></div><div class="toast autorization2-error fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true"><div class="toast-header"><i class="icon-error-alt mr-2 badge-danger rounded"></i> <strong class="mr-auto">Server</strong> <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="toast-body">Ошибка авторизации. Неправильный email или пароль</div></div><div class="toast registration-error fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true"><div class="toast-header"><i class="icon-error-alt mr-2 badge-danger rounded"></i> <strong class="mr-auto">Server</strong> <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="toast-body">Ошибка регистрации. Пользователь с таким email уже существует</div></div><div class="toast registration2-error fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true"><div class="toast-header"><i class="icon-error-alt mr-2 badge-danger rounded"></i> <strong class="mr-auto">Server</strong> <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="toast-body">Ошибка регистрации. Не удалось связаться с сервером</div></div><div class="form-row align-items-center"><div class="col-sm-6"><label class="sr-only" for="inlineFormInputGroupEmail">Email</label> <small id="emailHelpBlock" class="form-text text-muted">Введите Email</small><div class="input-group mb-2"><div class="input-group-prepend"><div class="input-group-text"><i class="icon-at"></i></div></div><input type="email" class="form-control" id="inlineFormInputGroupEmail" placeholder="Email" required aria-describedby="emailHelpBlock"></div></div><div class="col-sm-6 for-registration d-none"><label class="sr-only" for="inlineFormInputGroupName">Name</label> <small id="nameHelpBlock" class="form-text text-muted">Представьтесь (минимум 2 символа)</small><div class="input-group mb-2"><div class="input-group-prepend"><div class="input-group-text"><i class="icon-user"></i></div></div><input type="text" class="form-control" id="inlineFormInputGroupName" placeholder="Jonh Smith" minlength="2" aria-describedby="nameHelpBlock"></div></div><div class="col-12 for-registration d-none"><label class="sr-only" for="inlineFormInputGroupPhone">Phone</label> <small id="phoneHelpBlock" class="form-text text-muted">Введите ваш номер телефона в формате +375 33 1234567</small><div class="input-group mb-2"><div class="input-group-prepend"><div class="input-group-text"><i class="icon-mobile"></i></div></div><input type="tel" class="form-control col-3 text-center" id="inlineFormInputGroupPhonePre" value="+375" placeholder="prefix" aria-describedby="phoneHelpBlock"> <input type="tel" class="form-control col-9" id="inlineFormInputGroupPhone" placeholder="Mobile number" aria-describedby="phoneHelpBlock"></div></div><div class="col-sm-6"><label class="sr-only" for="inlineFormInputPswd">Password</label> <small id="pswdHelpBlock" class="form-text text-muted">Введите пароль (минимум 4 символа) </small><input type="password" class="form-control mb-2" id="inlineFormInputPswd" placeholder="Пароль" minlength="4" required aria-describedby="pswdHelpBlock"></div><div class="col-sm-6 for-registration d-none"><label class="sr-only" for="inlineFormInputPswd2">Password</label> <small id="pswdHelpBlock2" class="form-text text-muted">Введите пароль еще раз </small><input type="password" class="form-control mb-2" id="inlineFormInputPswd2" placeholder="Пароль" minlength="4" aria-describedby="pswdHelpBlock2"></div><div class="col-12 recovery-pswd"><div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="recovery-pswd"> <label class="form-check-label" for="recovery-pswd">Вспомнить пароль</label></div></div><div class="col-12 for-registration d-none"><div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" checked="checked" id="subscribe"> <label class="form-check-label" for="subscribe">Подписаться на наши новости и обновления товаров</label></div></div><div class="col-sm-6"><button type="submit" class="btn btn-danger mt-3" data-toggle="tooltip" data-placement="bottom" id="submit-btn" title="Заполните все поля правильно"><span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span> Отправить данные</button></div><div class="col-sm-6 for-registration d-none"><button type="button" class="btn btn-primary mt-3" id="clear-btn">Очистить данные</button></div></div></form></div><div class="modal-footer"><button type="button" class="btn btn-outline-primary btn-sm mx-auto active" id="auth-btn">Авторизация</button> <button type="button" class="btn btn-outline-success btn-sm mx-auto" id="reg-btn">Регистрация</button></div></div></div></div><nav class="nav1 navbar navbar-expand-md navbar-dark bg-dark sticky-top"><div class="container form-inline"><a href="/" class="navbar-brand"><img src="/images/oak-sm.png" class="d-inline-block align-top" alt="oak"> </a><button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbar9"><span class="navbar-toggler-icon"></span></button><div class="navbar-collapse collapse w-100" id="navbar9"><!--      Если убрать justify-content-center все прижмется влево!!!--><ul class="navbar-nav ml-auto w-100 justify-content-center"><li class="nav-item btn-nav-catalog"><a class="nav-link">Каталог</a></li><li class="nav-item btn-nav-how-to-buy"><a class="nav-link">Как купить</a></li><li class="nav-item btn-nav-delivery"><a class="nav-link">Доставка</a></li><li class="nav-item btn-nav-payment"><a class="nav-link">Оплата</a></li><li class="nav-item btn-nav-contact"><a class="nav-link">Контакты</a></li></ul></div><!--    add class to basket: '.no-autoriz' for no-autorizate state--> <a class="navbar-brand basket"><img src="/images/cart2-sm.png" class="d-inline-block align-top" alt="oak"> <span class="badge badge-success badge-pill basket-count">0</span> </a><!--    <a class="navbar-brand"--><!--       data-target="#">--><!--      <i class="icon-user-add"></i>--><!--&lt;!&ndash;      <span class="d-none d-sm-inline d-xl-block px-1">Sign Up</span>&ndash;&gt;--><!--    </a>--></div></nav><nav aria-label="breadcrumb" class="nav2"><div class="container"><ol class="breadcrumb" id="nav2"><li class="breadcrumb-item" id="nav2-home"><a href="#">Главная</a></li><!--      <li class="breadcrumb-item"><a href="#">Каталог</a></li>--><!--      <li class="breadcrumb-item active" aria-current="page">Data</li>--></ol></div></nav><main><div class="mt-5" id="home"><div class="container"><div class="row"><div class="col-sm-12"><h2 class="my-3 text-center">Добро пожаловать на сайт-витрину.</h2><p>Здесь вы можете просмотреть, выбрать товары из нашего каталога, узнать о способах их оплаты и доставки. А также вы можете связаться с нами, либо оставить свой заказ через корзину для нас и мы свяжемся с вами в ближайшее возможное время.</p><p>Обращаем Ваше внимание: данный сайт служит для презентации и рекламы товаров и <b>не является</b> сайтом-магазином.</p></div></div></div></div><div class="d-none mt-5" id="error-page"><div class="container"><div class="row"><div class="col-sm-12 text-center"><h2 class="my-5">Указанная страница не найдена</h2><br><h5 class="mb-5 pb-5" id="error-to-home"><a href="#">на главную</a></h5></div></div></div></div><div class="d-none" id="catalog"><div class="container"><div class="row"><div class="list-group list-group-flush col-sm-3 mb-3 ml-3 ml-sm-0 mt-2" id="catalog-navigation"><button class="alert alert-success text-left active" id="btn-catalog">Каталог</button><details><summary class="list-group-item list-group-item-action rounded">Плоды</summary><li class="list-group-item list-group-item-action rounded">Шишки</li><li class="list-group-item list-group-item-action rounded">Желуди</li><li class="list-group-item list-group-item-action rounded">Каштаны</li><li class="list-group-item list-group-item-action rounded">Ягоды</li></details><li class="list-group-item list-group-item-action rounded">Травы</li><li class="list-group-item list-group-item-action rounded">Стружка декоративная древесная</li><li class="list-group-item list-group-item-action rounded">Торцевые спилы дерева</li><li class="list-group-item list-group-item-action rounded">Мох</li><li class="list-group-item list-group-item-action rounded">Грибы</li><li class="list-group-item list-group-item-action rounded">Капы и сувели</li></div><div class="col-sm-9"><div class="row card-group" id="product-place"><!--          <div class="col-sm-6 col-md-4 col-xl-3 my-1">--><!--            <div class="card">--><!--&lt;!&ndash;              <i class="icon-heart like"></i>&ndash;&gt;--><!--              <img src="/images/cones-of-alder.jpg" class="card-img-top" alt="cones-of-alder">--><!--              <div class="card-body">--><!--                <h5 class="card-title">Шишки ольхи</h5>--><!--              </div>--><!--              <div class="card-footer">--><!--                <button type="button" class="btn btn-sm btn-outline-success">--><!--                  В корзину--><!--                  <i class="icon-shopping-basket"></i>--><!--                </button>--><!--              </div>--><!--            </div>--><!--          </div>--></div></div></div></div></div><!-- Modal --><div class="modal fade bd-example-modal-lg" id="basket-modal" tabindex="-1" role="dialog" aria-labelledby="basket-modal-content" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="basket-modal-content">Корзина: <span id="basket-item-number">0</span></h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><div class="toast clear-basket fade hide mx-auto" data-delay="1500" role="alert" aria-live="polite" aria-atomic="true"><div class="toast-header"><i class="icon-shopping-basket mr-2 badge-primary rounded"></i> <strong class="mr-auto">Basket</strong> <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="toast-body">Корзина очищена</div></div><div class="toast send-basket fade hide mx-auto" data-delay="3000" role="alert" aria-live="polite" aria-atomic="true"><div class="toast-header"><i class="icon-shopping-basket mr-2 badge-primary rounded"></i> <strong class="mr-auto">Basket</strong> <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="toast-body">Ваш заказ отправлен</div></div><h6>Список выбранных товаров:</h6><div id="basket-render-place"><h4 class="alert text-center mt-5">Пусто</h4><ol><li>Шишки</li><!--            <li>Шишки</li>--><!--            <li>Шишки</li>--><!--            <li>Шишки</li>--></ol></div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> <button type="button" class="btn btn-danger" id="clear-basket">Clear</button> <button type="button" class="btn btn-primary" id="send-basket">Отправить данные</button></div></div></div></div><div class="d-none mt-5" id="how-to-buy"><div class="container"><div class="row"><div class="col-12"><h3 class="text-center">How to buy</h3><p>lorem ipsum</p></div></div></div></div><div class="d-none mt-5" id="delivery"><div class="container"><div class="row"><div class="col-12"><h3 class="text-center">delivery</h3><p>lorem ipsum</p></div></div></div></div><div class="d-none mt-5" id="payment"><div class="container"><div class="row"><div class="col-12"><h3 class="text-center">payment</h3><p>lorem ipsum</p></div></div></div></div><div class="d-none mt-5" id="contact"><div class="container"><div class="row"><div class="col-12"><h3 class="text-center">contact</h3><p>lorem ipsum</p></div></div></div></div></main><footer><h5 class="text-center py-5"><i class="icon-copyright">2020</i></h5></footer><script type="text/javascript" src="/1.37e52c027c165e60d7d7.bundle.js"></script><script type="text/javascript" src="/37e52c027c165e60d7d7.bundle.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>РОЛЬШТОРЫ И ЖАЛЮЗИ ВСЕХ ВИДОВ</title>
+  <link rel="icon" href="img/favicon.ico">
+  <meta name="description" content="Project by Salimau Siarhei // Jaluzi5"/>
+  <meta name="author" content="Sergey Salimov"/>
+  <meta name="keywords" content="рольшторы, жалюзи, jaluzi"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="font/fontello/css/fontello.css">
+  <link rel="stylesheet" href="font/fontello/css/animation.css">
+
+  <link type="text/css" rel="stylesheet" href="dist/styles.css"/>
+
+</head>
+<body>
+<!--<nav class="navbar navbar-toggleable-md navbar-light bg-faded">-->
+  <!--<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
+    <!--<span class="navbar-toggler-icon"></span>-->
+  <!--</button>-->
+  <!--<div class="d-md-flex d-block flex-row mx-md-auto mx-0">-->
+    <!--<a class="navbar-brand" href="#">Navbar</a>-->
+    <!--<div class="collapse navbar-collapse mr-auto" id="navbarNavAltMarkup">-->
+      <!--<div class="navbar-nav">-->
+        <!--<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>-->
+        <!--<a class="nav-item nav-link" href="#">Features</a>-->
+        <!--<a class="nav-item nav-link" href="#">Pricing</a>-->
+        <!--<a class="nav-item nav-link disabled" href="#">Disabled</a>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</nav>-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mx-auto sticky-top flex-fill" id="mainNavbar">
+
+
+  <button class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div id="nav-bar-logo">
+    <a class="navbar-brand" href="#"><i class="icon-th">JALUZI5</i></a>
+  </div>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="nav navbar-nav navbar-center">
+
+      <li class="nav-item">
+        <a class="nav-link" id="first-nav-element" href="#second">Ассортимент</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#quality-section">О качестве</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#reviews-section">Отзывы</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#production-photo-section">Фото с производства</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#contact-section">Контакты</a>
+      </li>
+
+      <!--<li class="nav-item">-->
+      <!--<a class="nav-link" href="#">Link</a>-->
+      <!--</li>-->
+
+
+      <!--<li class="nav-item dropdown">-->
+      <!--<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"-->
+      <!--data-toggle="dropdown"-->
+      <!--aria-haspopup="true" aria-expanded="false">-->
+      <!--Dropdown-->
+      <!--</a>-->
+      <!--<div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+      <!--<a class="dropdown-item" href="#">Action</a>-->
+      <!--<a class="dropdown-item" href="#">Another action</a>-->
+      <!--<div class="dropdown-divider"></div>-->
+      <!--<a class="dropdown-item" href="#">Something else here</a>-->
+      <!--</div>-->
+      <!--</li>-->
+
+      <!--<li class="nav-item">-->
+      <!--<a class="nav-link disabled" href="#">Disabled</a>-->
+      <!--</li>-->
+
+
+      <!--<form class="form-inline my-2 my-lg-0">-->
+      <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+      <!--<button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>-->
+
+      <!--</form>-->
+    </ul>
+  </div>
+
+</nav>
+<section class="first-section" id="first">
+  <header>
+
+    <div class="header-bottom">
+      <div class="container mx-auto">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <div class="logo">
+              <a href="/">
+                <img src="img/logo.png" alt="logo">
+                <span>JALUZI5</span>
+                <p>
+                  Производим , продаем и устанавливаем <br/>
+                  рольшторы и жалюзи в Минске
+                </p>
+              </a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="get-a-call">
+              <a href="#">
+                <!--<object type="image/svg+xml" data="img/svg/telephone.svg" id="header-phone"></object>-->
+                <svg x="0px" y="0px" viewBox="0 0 512 512">
+                  <path d="M389.3,338.7c-16.7-16.5-37.6-16.5-54.2,0c-12.7,12.6-25.4,25.1-37.8,37.9c-3.4,3.5-6.3,4.3-10.4,1.9
+			c-8.2-4.5-16.9-8.1-24.8-13c-36.8-23.1-67.5-52.8-94.8-86.3c-13.5-16.6-25.6-34.4-34-54.4c-1.7-4-1.4-6.7,1.9-10
+			c12.7-12.3,25-24.8,37.5-37.4c17.4-17.5,17.4-37.9-0.1-55.5c-9.9-10-19.8-19.8-29.7-29.8c-10.2-10.2-20.3-20.6-30.7-30.7
+			c-16.7-16.3-37.6-16.3-54.2,0.1C45,74,32.8,86.9,19.8,99.3C7.7,110.7,1.7,124.7,0.4,141c-2,26.5,4.5,51.6,13.6,76
+			c18.8,50.5,47.3,95.4,81.9,136.5C142.7,409,198.5,453,263.9,484.8c29.4,14.3,59.9,25.3,93,27.1c22.8,1.3,42.6-4.5,58.5-22.3
+			c10.9-12.1,23.1-23.2,34.6-34.8c17-17.3,17.2-38.1,0.2-55.2C430,379.2,409.6,358.9,389.3,338.7z"/>
+                  <path d="M368.9,253.8l39.3-6.7c-6.2-36.1-23.2-68.8-49.1-94.8c-27.4-27.4-62-44.6-100.1-50l-5.5,39.5
+			c29.5,4.2,56.4,17.5,77.6,38.7C351,200.5,364.1,225.9,368.9,253.8z"/>
+                  <path d="M430.4,82.9C385,37.5,327.6,8.8,264.2,0l-5.5,39.5C313.4,47.2,363,72,402.3,111.1c37.2,37.2,61.6,84.2,70.4,135.8
+			l39.3-6.7C501.7,180.4,473.4,126,430.4,82.9z"/>
+                </svg>
+                <span>заказать звонок</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="contact-information">
+              <p>с 9:00 до 21:00 ежедневно</p>
+              <a href="tel:+375293322943">+375 (29) 332 29 43</a><br/>
+              <a href="tel:+375333522943">+375 (33) 352 29 43</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+
+        </div>
+        <div class="col-xs-12 col-sm-12">
+          <h1>
+            <b>РОЛЬШТОРЫ И ЖАЛЮЗИ</b><br/>
+            ВСЕХ ВИДОВ <span>от <b>29</b> руб/изд</span>
+          </h1>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-5">
+          <p>
+            Пока другие компании переходят на дешевые китайские ткани и комплектующие, мы <b>гарантируем
+            лучшие</b> в
+            Минске <b>цены</b> на европейские материалы
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 header-link-bottom">
+          <span>узнать подробнее</span>
+        </div>
+        <div class="col-xs-12 col-md-9">
+          <div class="header-section-form float-sm-right">
+            <h3>Рассчитайте цену<br/>за 5 минут</h3>
+            <h5>Назовем честную цену по телефону, которая не поменяется при замере</h5>
+            <form action="#" id="calculate-price">
+              <div class="form-row text-center">
+                <div class="form-group col-12">
+                  <select class="custom-select mr-sm-2">
+                    <option selected disabled>выберите тип изделия</option>
+                    <option value="1">Свободновисящие рольшторы</option>
+                    <option value="2">Кассетные рольшторы</option>
+                    <option value="3">Рольшторы День-Ночь</option>
+                    <option value="4">Рольшторы с фотопечатью</option>
+                    <option value="5">Рольшторы на пульте управления</option>
+                    <option value="6">Алюминиевые жалюзи</option>
+                    <option value="7">Бамбуковые жалюзи</option>
+                    <option value="8">Пластиковые жалюзи</option>
+                    <option value="9">Вертикальные жалюзи</option>
+                    <option value="10">Тканевые жалюзи</option>
+                    <option value="11">Жалюзи с фотопечатью</option>
+                    <option value="12">Мультифактурные жалюзи</option>
+                    <option value="13">Японские шторы</option>
+                    <option value="14">Римские шторы</option>
+                    <option value="15">Шторы-Плиссе</option>
+                  </select>
+                </div>
+                <div class="form-group col-6">
+                  <input type="number"
+                         class="form-control"
+                         title="Введите ширину изделия"
+                         name="jaluzi-width"
+                         placeholder="ширина">
+                </div>
+                <div class="form-group col-6">
+                  <input type="number"
+                         class="form-control"
+                         title="Введите высоту изделия"
+                         name="jaluzi-height"
+                         placeholder="высота">
+                </div>
+                <div class="form-group col-6">
+                  <input type="text"
+                         class="form-control"
+                         title="Введите ваше имя"
+                         size="20"
+                         placeholder="Ваше имя"
+                         autocomplete="on">
+                </div>
+                <div class="form-group col-6">
+                  <input type="phone"
+                         class="form-control"
+                         title="Введите ваш телефон, формат +375 XX XXXXXXX"
+                         size="30"
+                         name="phone"
+
+                         placeholder="ваш телефон"
+                         autocomplete="on"
+                         autofocus
+                         value="+375 "
+                         pattern="\+[0-9]{3} [0-9]{2} [0-9]{7}"
+                         aria-describedby="phoneHelp"/>
+                  <small id="phoneHelp" class="form-text text-muted">формат +375 XX XXXXXXX</small>
+                </div>
+                <div class="form-group offset-2 col-8 offset-2">
+                  <button type="submit" class="btn btn-warning btn-block">Рассчитать цену</button>
+                </div>
+
+
+              </div>
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</section>
+
+<section class="second-section" id="second">
+  <div class="container">
+    <div class="row second-section-header">
+
+      <div class="offset-1 col-2">
+        <svg x="0px" y="0px" viewBox="0 0 512 512">
+          <g>
+            <path d="M269.1,159.9c-4.5,4.5-4.5,11.9,0,16.4c4.5,4.5,11.9,4.5,16.4,0l9.6-9.6c3.4-3.4,4.4-8.7,2.3-13.1
+		c-6.4-13.7-9.6-27.9-9.6-42.2c0-29.1,12.6-56.4,34-75.3l0,75.8c0,3.8,1.9,7.4,5,9.5l55,38.1c4,2.7,9.2,2.7,13.2,0l55-38
+		c3.1-2.2,5-5.7,5-9.5l0-75.8c21.3,18.9,34,46.2,34,75.3c0,26.9-10.5,52.1-29.5,71.1c-19,19-44.2,29.4-71,29.4c0,0-0.1,0-0.1,0
+		c-9.2,0-27.4-4.5-33.6-6.2c-4-1.1-8.3,0-11.3,3l-35.2,35.2c-4.5,4.5-4.5,11.9,0,16.4c2.3,2.3,5.2,3.4,8.2,3.4s5.9-1.1,8.2-3.4
+		l30.5-30.5c8.5,2.1,23.1,5.3,33.1,5.3c0,0,0.1,0,0.1,0c33,0,64.1-12.9,87.4-36.2c23.4-23.4,36.2-54.4,36.2-87.5
+		c0-44.5-24.2-85.8-63-107.7c-3.6-2-8-2-11.5,0.1c-3.6,2.1-5.7,5.9-5.7,10l0,92.2l-43.4,30l-43.4-30l0-92.2c0-4.1-2.2-7.9-5.7-10
+		c-3.6-2.1-7.9-2.1-11.5-0.1c-38.9,22-63,63.3-63,107.8c0,15,2.9,29.9,8.6,44.4L269.1,159.9z"/>
+            <path d="M238.4,313.7L77.7,474.4c-6,6-14.1,9.4-22.6,9.4c0,0,0,0,0,0c-8.5,0-16.6-3.3-22.6-9.4c-6-6-9.4-14.1-9.3-22.6
+		c0-8.5,3.3-16.5,9.4-22.6L170.8,291c4.5-4.5,4.5-11.9,0-16.4c-4.5-4.5-11.9-4.5-16.4,0L16.2,412.8C5.8,423.2,0,437,0,451.7
+		c0,14.7,5.7,28.6,16.1,39c10.4,10.4,24.3,16.2,39,16.2c0,0,0,0,0,0c14.7,0,28.6-5.8,39-16.2l160.7-160.7c4.5-4.5,4.5-11.9,0-16.4
+		C250.3,309.2,242.9,309.2,238.4,313.7z"/>
+            <path d="M54.9,437.7c-3.8,0-7.4,1.5-10,4.2c-5.6,5.5-5.6,14.6-0.1,20.2c0,0,0,0,0,0c2.8,2.8,6.4,4.2,10.1,4.2
+		c3.7,0,7.3-1.4,10.1-4.2c5.5-5.6,5.5-14.6,0-20.1C62.4,439.2,58.8,437.7,54.9,437.7C55,437.7,55,437.7,54.9,437.7z"/>
+            <path d="M433.7,379c-1.2-1.2-2.6-2.1-4.2-2.7l-33.2-12l-120-120l19.4-19.4c4.5-4.5,4.5-11.9,0-16.4c-3.4-3.4-8.5-4.3-12.7-2.5
+		L101.4,24.5c-11-11-25.6-17.1-41.2-17.1c0,0,0,0-0.1,0C44.6,7.4,30,13.4,19,24.4C8,35.5,1.9,50.1,1.9,65.7
+		C1.9,81.3,8,95.9,19,106.9l181.5,181.5c-1.8,4.2-0.9,9.3,2.5,12.7c4.5,4.5,11.9,4.5,16.4,0l19.4-19.4l120,120l12,33.2
+		c0.6,1.6,1.5,3,2.7,4.2l67.3,67.3c2.3,2.3,5.2,3.4,8.2,3.4s5.9-1.1,8.2-3.4l43.8-43.8c2.2-2.2,3.4-5.1,3.4-8.2c0-3.1-1.2-6-3.4-8.2
+		L433.7,379z M251.6,236C251.6,236.1,251.6,236.1,251.6,236l-35.4,35.4L35.4,90.5c-6.6-6.6-10.3-15.5-10.3-24.8
+		c0-9.4,3.7-18.2,10.3-24.9c6.6-6.6,15.4-10.3,24.8-10.3c0,0,0,0,0,0c9.4,0,18.2,3.7,24.8,10.3l180.9,180.9L251.6,236
+		C251.7,236,251.7,236,251.6,236z M449,481.9l-57.3-57.3l-12-33.2c-0.6-1.6-1.5-3-2.7-4.2L255.1,265.3l4.7-4.7l121.8,121.8
+		c1.2,1.2,2.6,2.1,4.2,2.7l33.2,12l57.3,57.3L449,481.9z"/>
+            <path d="M68.3,57.4c-4.5-4.5-11.9-4.5-16.4,0c-4.5,4.5-4.5,11.9,0,16.4l159.8,159.8c2.3,2.3,5.2,3.4,8.2,3.4s5.9-1.1,8.2-3.4
+		c4.5-4.5,4.5-11.9,0-16.4L68.3,57.4z"/>
+          </g>
+        </svg>
+        <span>собственное<br/>производство</span>
+      </div>
+      <div class="col-2">
+        <svg x="0px" y="0px" viewBox="0 0 512 512">
+          <path d="M19.1,20.3c-2.9-2.9-7.2-3.7-10.9-2.2C4.4,19.6,2,23.3,2,27.4V502c0,5.5,4.5,10,10,10h473.8c4.1,0,7.7-2.4,9.3-6.2
+	s0.7-8.1-2.2-10.9L19.1,20.3z M22.1,491.9v-34.1h21.4c5.5,0,10-4.5,10-10c0-5.5-4.5-10-10-10H22.1v-20.1h22.1c5.5,0,10-4.5,10-10
+	c0-5.5-4.5-10-10-10H22.1v-20.1h22.1c5.5,0,10-4.5,10-10c0-5.5-4.5-10-10-10H22.1v-20.1h42.1c5.5,0,10-4.5,10-10c0-5.5-4.5-10-10-10
+	H22.1v-20.1h22.1c5.5,0,10-4.5,10-10c0-5.5-4.5-10-10-10H22.1v-20.1h22.1c5.5,0,10-4.5,10-10s-4.5-10-10-10H22.1v-22.1h22.1
+	c5.5,0,10-4.5,10-10s-4.5-10-10-10H22.1v-18h42.1c5.5,0,10-4.5,10-10c0-5.5-4.5-10-10-10H22.1V137h22.1c5.5,0,10-4.5,10-10
+	c0-5.5-4.5-10-10-10H22.1V51.6l439.6,440.3H22.1z"/>
+          <path d="M105.4,425.7h168.1c4.1,0,7.7-2.4,9.3-6.2c1.6-3.7,0.7-8.1-2.2-10.9L112.5,240.2c-2.9-2.9-7.2-3.7-10.9-2.2
+	c-3.7,1.6-6.2,5.2-6.2,9.3v168.4C95.4,421.2,99.9,425.7,105.4,425.7z M115.4,271.5l133.9,134.1H115.4V271.5z"/>
+          <path d="M243.2,105.8c0,0.1,0,0.1,0.1,0.2c0.1,0.2,0.2,0.5,0.3,0.7c0,0.1,0.1,0.2,0.1,0.3c0.1,0.2,0.3,0.5,0.4,0.7
+	c0,0.1,0.1,0.2,0.1,0.2c0.2,0.2,0.3,0.5,0.5,0.7c0,0.1,0.1,0.1,0.1,0.2c0.2,0.3,0.5,0.6,0.7,0.8L417,281c0,0,0,0,0,0
+	c10.4,10.4,24.2,16.1,38.9,16.1c14.7,0,28.6-5.7,39-16.1l0.8-0.8c10.4-10.4,16.1-24.3,16.1-39s-5.7-28.6-16.1-39c0,0,0,0-0.1-0.1
+	L324.3,30.8c0,0,0,0,0,0c-0.2-0.2-0.5-0.5-0.8-0.7c-0.1-0.1-0.1-0.1-0.2-0.2c-0.2-0.2-0.4-0.3-0.7-0.5c-0.1-0.1-0.2-0.1-0.2-0.1
+	c-0.2-0.1-0.5-0.3-0.7-0.4c-0.1,0-0.2-0.1-0.3-0.1c-0.2-0.1-0.5-0.2-0.7-0.3c-0.1,0-0.1,0-0.1-0.1L243.8,1.2
+	c-7.8-2.8-16.7-0.8-22.6,5.1c-5.9,5.9-7.9,14.7-5.1,22.6L243.2,105.8z M481.6,266l-0.8,0.8c-6.6,6.6-15.4,10.3-24.8,10.3
+	c-5.9,0-11.6-1.5-16.7-4.2l24.1-24.1c0,0,0,0,0.1-0.1c0,0,0,0,0.1-0.1l24.2-24.2c2.7,5.1,4.2,10.8,4.2,16.7
+	C491.9,250.6,488.2,259.4,481.6,266z M456.3,227.5L427,198.2c-3.9-3.9-10.3-3.9-14.2,0c-3.9,3.9-3.9,10.3,0,14.2l29.3,29.3
+	L424,259.8L266.8,102.5l18.1-18.1l71.2,71.2c2,2,4.5,2.9,7.1,2.9s5.1-1,7.1-2.9c3.9-3.9,3.9-10.3,0-14.2L299,70.3l18.2-18.2
+	l157.2,157.2L456.3,227.5z M235.4,20.5c0.4-0.4,1.1-0.6,1.7-0.4L298.9,42l-42.1,42.1L235,22.2C234.8,21.6,234.9,21,235.4,20.5z"/>
+          <path d="M382.4,180.6c0.3,0.6,0.6,1.2,0.9,1.7c0.4,0.6,0.8,1.1,1.3,1.5s1,0.9,1.5,1.2c0.5,0.4,1.1,0.7,1.7,0.9
+	c0.6,0.3,1.2,0.4,1.9,0.6c0.6,0.1,1.3,0.2,2,0.2s1.3-0.1,2-0.2c0.6-0.1,1.3-0.3,1.9-0.6c0.6-0.3,1.2-0.6,1.7-0.9
+	c0.6-0.4,1.1-0.8,1.5-1.2s0.9-1,1.2-1.5c0.4-0.5,0.7-1.1,0.9-1.7c0.3-0.6,0.4-1.2,0.6-1.9c0.1-0.6,0.2-1.3,0.2-2
+	c0-0.7-0.1-1.3-0.2-2c-0.1-0.6-0.3-1.3-0.6-1.9c-0.3-0.6-0.6-1.2-0.9-1.7c-0.4-0.6-0.8-1.1-1.2-1.5c-0.5-0.5-1-0.9-1.5-1.2
+	c-0.5-0.4-1.1-0.7-1.7-0.9c-0.6-0.3-1.2-0.4-1.9-0.6c-1.3-0.3-2.6-0.3-3.9,0c-0.6,0.1-1.3,0.3-1.9,0.6c-0.6,0.3-1.2,0.6-1.7,0.9
+	c-0.6,0.4-1.1,0.8-1.5,1.2c-0.5,0.5-0.9,1-1.3,1.5c-0.4,0.5-0.7,1.1-0.9,1.7c-0.3,0.6-0.5,1.2-0.6,1.9c-0.1,0.7-0.2,1.3-0.2,2
+	c0,0.6,0.1,1.3,0.2,2C381.9,179.4,382.1,180,382.4,180.6z"/>
+        </svg>
+        <span>замер доставка<br/> и монтаж<br/>бесплатно</span>
+      </div>
+      <div class="col-2">
+        <svg x="0px" y="0px" viewBox="0 0 512 512">
+          <g>
+            <g>
+              <path d="M511.9,226.5c-0.4-4.1-2.6-7.9-5.9-10.4l-40.6-30.7l14.8-48.7c1.2-4,0.7-8.3-1.4-11.9c-2.1-3.6-5.6-6.2-9.6-7.1L419.7,106
+			l-6.3-50.5c-0.5-4.1-2.7-7.9-6.1-10.3c-3.4-2.5-7.6-3.4-11.7-2.6l-50,9.6L319.3,8.6c-2.2-3.6-5.7-6.1-9.8-6.9
+			c-4.1-0.9-8.3,0-11.8,2.4L256,33.1L214.3,4c-3.4-2.4-7.7-3.2-11.8-2.4s-7.6,3.4-9.8,7l-26.3,43.5l-50-9.6
+			c-4.1-0.8-8.3,0.2-11.7,2.6c-3.4,2.5-5.6,6.2-6.1,10.3L92.3,106l-49.5,11.6c-4.1,0.9-7.5,3.5-9.6,7.1c-2.1,3.6-2.6,7.9-1.4,11.9
+			l14.8,48.7L6,216c-3.3,2.5-5.5,6.3-5.9,10.4c-0.4,4.1,0.9,8.3,3.6,11.4L37,276.4l-24.6,44.6c-2,3.7-2.4,8-1.1,11.9
+			c1.3,4,4.2,7.2,7.9,9l46.1,21.6l-4.3,50.7c-0.4,4.2,1,8.3,3.8,11.4c2.8,3.1,6.7,4.9,10.9,5l50.9,1l16.7,48.1
+			c1.4,3.9,4.3,7.1,8.1,8.8c3.8,1.7,8.1,1.7,12,0.1l46.9-19.8l34.8,37.1c2.9,3,6.8,4.8,11,4.8s8.2-1.7,11-4.8l34.8-37.1l46.9,19.8
+			c3.8,1.6,8.2,1.6,12-0.1c3.8-1.7,6.7-4.9,8.1-8.8l16.7-48.1l50.9-1c4.2-0.1,8.1-1.9,10.9-5s4.2-7.2,3.8-11.4l-4.3-50.7l46.1-21.6
+			c3.8-1.8,6.6-5,7.9-9c1.3-4,0.9-8.3-1.1-11.9L475,276.4l33.3-38.5C511.1,234.7,512.4,230.6,511.9,226.5z M443.6,281.7l21.9,39.7
+			l-41,19.2c-5.7,2.7-9.2,8.6-8.6,14.9l3.8,45.1l-45.3,0.9c-6.3,0.1-11.9,4.2-13.9,10.1l-14.9,42.8l-41.7-17.6
+			c-5.8-2.5-12.5-1-16.9,3.6l-31,33l-31-33c-2.9-3.1-6.9-4.8-11-4.8c-2,0-4,0.4-5.9,1.2l-41.7,17.6l-14.9-42.8
+			c-2.1-6-7.6-10-13.9-10.1l-45.3-0.9l3.8-45.1c0.5-6.3-2.9-12.2-8.6-14.9l-41-19.2l21.9-39.7c3-5.5,2.3-12.4-1.8-17.1L37,230.3
+			L73.1,203c5-3.8,7.2-10.4,5.3-16.4l-13.1-43.3l44.1-10.3c6.1-1.4,10.7-6.5,11.5-12.8l5.6-44.9l44.5,8.5c6.2,1.2,12.5-1.6,15.7-7
+			L210.2,38l37.2,25.9c5.2,3.6,12.1,3.6,17.2,0L301.8,38l23.4,38.8c3.3,5.4,9.5,8.2,15.7,7l44.5-8.5l5.6,44.9
+			c0.8,6.3,5.4,11.4,11.5,12.8l44.1,10.3l-13.1,43.3c-1.8,6,0.3,12.6,5.3,16.4l36.1,27.3l-29.6,34.3
+			C441.2,269.4,440.5,276.2,443.6,281.7z"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M256,111.7c-79.6,0-144.3,64.7-144.3,144.3S176.4,400.3,256,400.3S400.3,335.6,400.3,256S335.6,111.7,256,111.7z
+			 M256,370.1c-62.9,0-114.1-51.2-114.1-114.1S193.1,141.9,256,141.9S370.1,193.1,370.1,256S318.9,370.1,256,370.1z"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M315.1,213c-5.9-5.9-15.4-5.9-21.3,0L239.9,267l-21.6-21.6c-5.9-5.9-15.4-5.9-21.3,0c-5.9,5.9-5.9,15.4,0,21.3l32.3,32.3
+			c2.9,2.9,6.8,4.4,10.7,4.4c3.9,0,7.7-1.5,10.7-4.4l64.6-64.6C321,228.5,321,218.9,315.1,213z"/>
+            </g>
+          </g>
+        </svg>
+        <span>пожизненная<br/>гарантия<br/>на монтаж</span>
+      </div>
+      <div class="col-2">
+        <svg x="0px" y="0px" viewBox="0 0 512 512">
+          <g>
+            <g>
+              <path d="M477.9,25.6H85.3c-18.9,0-34.1,15.3-34.1,34.1v273.1H8.5c-4.7,0-8.5,3.8-8.5,8.5c0,18.9,15.3,34.1,34.1,34.1h247.5v102.4
+			c0,4.7,3.8,8.5,8.5,8.5c2.3,0,4.4-0.9,6-2.5l45.2-45.2l45.2,45.2c1.6,1.6,3.8,2.5,6,2.5c1.1,0,2.2-0.2,3.3-0.6
+			c3.2-1.3,5.3-4.4,5.3-7.9V375.5h25.6c18.9,0,34.1-15.3,34.1-34.1V68.3h42.7c4.7,0,8.5-3.8,8.5-8.5C512,40.9,496.7,25.6,477.9,25.6
+			z M443.7,59.7v273.1h-34.1v17.1h31.8c-3,5.3-8.7,8.5-14.8,8.5h-25.6v-8.5H384v107.4l-36.6-36.6c-3.3-3.3-8.7-3.3-12.1,0
+			l-36.6,36.6V349.9h-17.1v8.5H34.1c-6.1,0-11.7-3.3-14.8-8.5h40.4h213.3v-17.1H68.3V59.7c0-9.4,7.6-17.1,17.1-17.1h363.1
+			C445.4,47.8,443.8,53.7,443.7,59.7z M463.1,51.2c4.7-8.2,15.2-10.9,23.3-6.2c2.6,1.5,4.7,3.6,6.2,6.2H463.1z"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M421.8,292.7l-10.9-19.6l11-19.6c2.3-4.1,0.9-9.3-3.2-11.6c-0.2-0.1-0.4-0.2-0.6-0.3l-20.4-9.3l-2.6-22.3
+			c-0.6-4.7-4.8-8-9.5-7.5c-0.2,0-0.4,0.1-0.6,0.1l-22,4.4l-15.2-16.5c-3.4-3.5-9-3.5-12.4-0.1c0,0-0.1,0.1-0.1,0.1L319.9,207
+			l-22-4.4c-4.6-0.9-9.1,2.1-10,6.7c0,0.2-0.1,0.4-0.1,0.6l-2.6,22.3l-20.4,9.3c-4.3,2-6.2,7-4.2,11.3c0.1,0.2,0.2,0.4,0.3,0.6
+			l11,19.5l-11,19.6c-2.3,4.1-0.9,9.3,3.2,11.6c0.2,0.1,0.4,0.2,0.6,0.3l20.4,9.3l2.6,22.3c0.6,4.7,4.8,8,9.5,7.5
+			c0.2,0,0.4-0.1,0.6-0.1l22-4.4l15.2,16.5c3.2,3.5,8.6,3.7,12.1,0.5c0.2-0.2,0.3-0.3,0.5-0.5l15.2-16.5l22,4.4
+			c2.3,0.5,4.8-0.1,6.7-1.5c1.9-1.4,3.1-3.5,3.4-5.9l2.6-22.3l20.4-9.3c4.3-2,6.2-7,4.2-11.3C422,293.1,421.9,292.9,421.8,292.7z
+			 M393.6,277.2l8.8,15.7l-16.3,7.5c-2.7,1.2-4.6,3.8-4.9,6.8l-2.1,17.9l-17.6-3.5c-2.9-0.6-5.9,0.4-7.9,2.6l-12.2,13.2l-12.2-13.2
+			c-1.6-1.7-3.9-2.7-6.3-2.7c-0.6,0-1.1,0.1-1.7,0.2l-17.6,3.5l-2.1-17.9c-0.3-3-2.2-5.5-4.9-6.8l-16.3-7.5l8.8-15.7
+			c1.5-2.6,1.5-5.8,0-8.3v0l-8.8-15.7l16.3-7.5c2.7-1.2,4.6-3.8,4.9-6.8l2.1-17.9l17.6,3.5c2.9,0.6,5.9-0.4,7.9-2.6l12.2-13.2
+			l12.2,13.2c2,2.2,5,3.2,7.9,2.6l17.6-3.5l2.1,17.9c0.3,3,2.2,5.5,4.9,6.8l16.3,7.5l-8.8,15.7C392.2,271.5,392.2,274.6,393.6,277.2
+			z"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M341.3,230.4c-23.6,0-42.7,19.1-42.7,42.7c0,23.6,19.1,42.6,42.7,42.7c23.6,0,42.7-19.1,42.7-42.7
+			S364.9,230.4,341.3,230.4z M341.3,298.7c-14.1,0-25.6-11.5-25.6-25.6s11.5-25.6,25.6-25.6s25.6,11.5,25.6,25.6
+			S355.5,298.7,341.3,298.7z"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <rect x="187.7" y="76.8" width="136.5" height="17.1"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <rect x="102.4" y="128" width="307.2" height="17.1"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <rect x="102.4" y="162.1" width="307.2" height="17.1"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <rect x="110.9" y="273.1" width="110.9" height="17.1"/>
+            </g>
+          </g>
+        </svg>
+        <span>3 года гарантии<br/>на материалы</span>
+      </div>
+      <div class="col-2">
+        <svg x="0px" y="0px" viewBox="0 0 512 512">
+          <g>
+            <g>
+              <path d="M510.9,314.6L488.4,256l22.5-58.6c2.5-6.5,0.5-13.8-4.9-18.2l-48.7-39.5l-9.9-62c-1.1-6.8-6.5-12.2-13.3-13.3l-62-9.9
+			L332.7,5.9c-4.4-5.4-11.7-7.3-18.2-4.9L256,23.5L197.4,1.1c-6.5-2.5-13.8-0.5-18.1,4.9l-39.5,48.7l-62,9.9
+			C71,65.6,65.6,71,64.5,77.8l-9.9,62L5.9,179.3c-5.4,4.4-7.3,11.7-4.9,18.1L23.5,256L1.1,314.6c-2.5,6.5-0.5,13.8,4.9,18.1
+			l48.7,39.5l9.9,62c1.1,6.8,6.5,12.2,13.3,13.3l62,9.9l39.5,48.7c4.4,5.4,11.7,7.4,18.2,4.9l58.6-22.5l58.6,22.5
+			c1.9,0.7,3.8,1.1,5.7,1.1c4.7,0,9.3-2.1,12.4-5.9l39.5-48.7l62-9.9c6.8-1.1,12.2-6.5,13.3-13.3l9.9-62l48.7-39.5
+			C511.4,328.4,513.4,321,510.9,314.6z M456.3,261.7l20.5,53.4l-44.5,36c-3.1,2.5-5.1,6-5.7,9.9l-9,56.5l-56.5,9
+			c-3.9,0.6-7.4,2.7-9.9,5.7l-36,44.5l-53.4-20.5c-1.9-0.7-3.8-1.1-5.8-1.1c-2,0-3.9,0.4-5.7,1.1l-53.4,20.5l-36-44.5
+			c-2.5-3.1-6-5.1-9.9-5.7l-56.5-9l-9-56.5c-0.6-3.9-2.7-7.4-5.7-9.9l-44.5-36l20.5-53.4c1.4-3.7,1.4-7.8,0-11.5l-20.5-53.5l44.5-36
+			c3.1-2.5,5.1-6,5.7-9.9l9-56.5l56.5-9c3.9-0.6,7.4-2.7,9.9-5.7l36-44.5l53.4,20.5c3.7,1.4,7.8,1.4,11.5,0l53.4-20.5l36,44.5
+			c2.5,3.1,6,5.1,9.9,5.7l56.5,9l9,56.5c0.6,3.9,2.7,7.4,5.7,9.9l44.5,36l-20.5,53.4C454.9,254,454.9,258,456.3,261.7z"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M208,128c-26.5,0-48,21.5-48,48s21.5,48,48,48s48-21.5,48-48S234.5,128,208,128z M208,192c-8.8,0-16-7.2-16-16
+			s7.2-16,16-16c8.8,0,16,7.2,16,16S216.8,192,208,192z"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M304,288c-26.5,0-48,21.5-48,48c0,26.5,21.5,48,48,48c26.5,0,48-21.5,48-48C352,309.5,330.4,288,304,288z M304,352
+			c-8.8,0-16-7.2-16-16c0-8.8,7.2-16,16-16c8.8,0,16,7.2,16,16C320,344.8,312.8,352,304,352z"/>
+            </g>
+          </g>
+          <g>
+            <g>
+              <path d="M345.3,131c-7.2-5.1-17.2-3.5-22.3,3.7l-160,224c-5.2,7.2-3.5,17.2,3.7,22.3c2.8,2,6.1,3,9.3,3c5,0,9.9-2.3,13-6.7
+			l160-224C354.1,146.1,352.5,136.1,345.3,131z"/>
+            </g>
+          </g>
+        </svg>
+        <span>скидки<br/>на объемы</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container second-section-main">
+    <div class="row">
+      <div class="col-xs-12 second-section-h2">
+        <h2>
+          <img src="img/logo.png" alt="logo">
+          <span>Производим рольшторы и жалюзи всех видов</span>
+        </h2>
+      </div>
+    </div>
+
+
+    <div class="row second-section-navigation">
+
+      <!-- List group -->
+      <div class="list-group list-group-horizontal-md col-xs-12 col-sm-6 col-md-12"
+           id="myList" role="tablist">
+        <li class="list-group-item">Тип изделия</li>
+        <a class="list-group-item list-group-item-dark list-group-item-action active"
+           data-toggle="list"
+           href="#all-curtain-and-jaluzi"
+           role="tab">Все виды</a>
+        <a class="list-group-item list-group-item-dark list-group-item-action"
+           data-toggle="list"
+           href="#rulon-curtain"
+           role="tab">Рулонные шторы</a>
+        <a class="list-group-item list-group-item-dark list-group-item-action"
+           data-toggle="list"
+           href="#horizontal-jaluzi"
+           role="tab">Горизонтальные жалюзи</a>
+        <a class="list-group-item list-group-item-dark list-group-item-action"
+           data-toggle="list"
+           href="#vertical-jaluzi"
+           role="tab">Вертикальные жалюзи</a>
+        <a class="list-group-item list-group-item-dark list-group-item-action"
+           data-toggle="list"
+           href="#other-jaluzi"
+           role="tab">Другие виды</a>
+      </div>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="tab-content second-section-carts">
+
+      <div class="tab-pane fade show active justify-content-center" id="all-curtain-and-jaluzi" role="tabpanel">
+        <!--ALL-->
+        <div class="card-deck">
+          <!--1-->
+          <div class="card">
+            <img src="img/cards-img/aluminzhaluzi.jpg" class="card-img-top" alt="Алюминиевые жалюзи">
+            <div class="card-body text-center">
+              <h5 class="card-title">Алюминиевые жалюзи</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--2-->
+          <div class="card">
+            <img src="img/cards-img/derzhaluzi.png" class="card-img-top" alt="Деревянные жалюзи">
+            <div class="card-body text-center">
+              <h5 class="card-title">Деревянные жалюзи</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--3-->
+          <div class="card">
+            <img src="img/cards-img/bambukzhaluzi.jpg" class="card-img-top" alt="Бамбуковые жалюзи">
+            <div class="card-body text-center">
+              <h5 class="card-title">Бамбуковые жалюзи</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--4-->
+          <div class="card">
+            <img src="img/cards-img/plastikzhaluzi.jpg" class="card-img-top" alt="Пластиковые жалюзи">
+            <div class="card-body text-center">
+              <h5 class="card-title">Пластиковые жалюзи</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--5-->
+          <div class="card">
+            <img src="img/cards-img/tkanevyezhaluzi.jpg" class="card-img-top" alt="Тканевые жалюзи">
+            <div class="card-body text-center">
+              <h5 class="card-title">Тканевые жалюзи</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--6-->
+          <div class="card">
+            <img src="img/cards-img/zhaluzisfotopechatju.jpg" class="card-img-top" alt="Жалюзи с фотопечатью">
+            <div class="card-body text-center">
+              <h5 class="card-title">Жалюзи с фотопечатью</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--7-->
+          <div class="card">
+            <img src="img/cards-img/multifakturnye.jpg" class="card-img-top" alt="Мультифактурные жалюзи">
+            <div class="card-body text-center">
+              <h5 class="card-title">Мультифактурные жалюзи</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--8-->
+          <div class="card">
+            <img src="img/cards-img/japonskieshtory.jpeg" class="card-img-top" alt="Японские шторы">
+            <div class="card-body text-center">
+              <h5 class="card-title">Японские шторы</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--9-->
+          <div class="card">
+            <img src="img/cards-img/rimskieshtory.jpg" class="card-img-top" alt="Римские шторы">
+            <div class="card-body text-center">
+              <h5 class="card-title">Римские шторы</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--10-->
+          <div class="card">
+            <img src="img/cards-img/plisse.jpg" class="card-img-top" alt="Шторы-Плиссе">
+            <div class="card-body text-center">
+              <h5 class="card-title">Шторы-Плиссе</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--11-->
+          <div class="card">
+            <img src="img/cards-img/svobodnovisjashhierolshtory.jpg" class="card-img-top"
+                 alt="Свободновисящие рольшторы">
+            <div class="card-body text-center">
+              <h5 class="card-title">Свободновисящие рольшторы</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--12-->
+          <div class="card">
+            <img src="img/cards-img/rolshtorykasset.jpg" class="card-img-top" alt="Кассетные рольшторы">
+            <div class="card-body text-center">
+              <h5 class="card-title">Кассетные рольшторы</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--13-->
+          <div class="card">
+            <img src="img/cards-img/dennoch.jpg" class="card-img-top" alt="Рольшторы День-Ночь">
+            <div class="card-body text-center">
+              <h5 class="card-title">Рольшторы День-Ночь</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--14-->
+          <div class="card">
+            <img src="img/cards-img/fotopechat.jpg" class="card-img-top" alt="Рольшторы с фотопечатью">
+            <div class="card-body text-center">
+              <h5 class="card-title">Рольшторы с фотопечатью</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+          <!--15-->
+          <div class="card">
+            <img src="img/cards-img/pult.jpg" class="card-img-top" alt="Рольшторы на пульте управления">
+            <div class="card-body text-center">
+              <h5 class="card-title">Рольшторы на пульте управления</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="tab-pane fade4" id="rulon-curtain" role="tabpanel">
+        <!--Рулонные шторы-->
+        <div class="card-deck">
+
+          <div class="card">
+            <img src="img/cards-img/svobodnovisjashhierolshtory.jpg" class="card-img-top"
+                 alt="Свободновисящие рольшторы">
+            <div class="card-body text-center">
+              <h5 class="card-title">Свободновисящие рольшторы</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/cards-img/rolshtorykasset.jpg" class="card-img-top" alt="Кассетные рольшторы">
+            <div class="card-body text-center">
+              <h5 class="card-title">Кассетные рольшторы</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/cards-img/dennoch.jpg" class="card-img-top" alt="Рольшторы День-Ночь">
+            <div class="card-body text-center">
+              <h5 class="card-title">Рольшторы День-Ночь</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/cards-img/fotopechat.jpg" class="card-img-top" alt="Рольшторы с фотопечатью">
+            <div class="card-body text-center">
+              <h5 class="card-title">Рольшторы с фотопечатью</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/cards-img/pult.jpg" class="card-img-top" alt="Рольшторы на пульте управления">
+            <div class="card-body text-center">
+              <h5 class="card-title">Рольшторы на пульте управления</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="tab-pane fade" id="horizontal-jaluzi" role="tabpanel">
+
+        <div class="card-deck">
+
+          <div class="card">
+            <img src="img/cards-img/aluminzhaluzi.jpg" class="card-img-top" alt="Алюминиевые жалюзи">
+            <div class="card-body text-center">
+              <h5 class="card-title">Алюминиевые жалюзи</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/cards-img/derzhaluzi.png" class="card-img-top" alt="Деревянные жалюзи">
+            <div class="card-body text-center">
+              <h5 class="card-title">Деревянные жалюзи</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/cards-img/bambukzhaluzi.jpg" class="card-img-top" alt="Бамбуковые жалюзи">
+            <div class="card-body text-center">
+              <h5 class="card-title">Бамбуковые жалюзи</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/cards-img/plastikzhaluzi.jpg" class="card-img-top" alt="Пластиковые жалюзи">
+            <div class="card-body text-center">
+              <h5 class="card-title">Пластиковые жалюзи</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="tab-pane fade" id="vertical-jaluzi" role="tabpanel">
+
+        <div class="card-deck">
+
+          <div class="card">
+            <img src="img/cards-img/tkanevyezhaluzi.jpg" class="card-img-top" alt="Тканевые жалюзи">
+            <div class="card-body text-center">
+              <h5 class="card-title">Тканевые жалюзи</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/cards-img/zhaluzisfotopechatju.jpg" class="card-img-top" alt="Жалюзи с фотопечатью">
+            <div class="card-body text-center">
+              <h5 class="card-title">Жалюзи с фотопечатью</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/cards-img/multifakturnye.jpg" class="card-img-top" alt="Мультифактурные жалюзи">
+            <div class="card-body text-center">
+              <h5 class="card-title">Мультифактурные жалюзи</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="tab-pane fade" id="other-jaluzi" role="tabpanel">
+
+        <div class="card-deck">
+
+          <div class="card">
+            <img src="img/cards-img/japonskieshtory.jpeg" class="card-img-top" alt="Японские шторы">
+            <div class="card-body text-center">
+              <h5 class="card-title">Японские шторы</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/cards-img/rimskieshtory.jpg" class="card-img-top" alt="Римские шторы">
+            <div class="card-body text-center">
+              <h5 class="card-title">Римские шторы</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/cards-img/plisse.jpg" class="card-img-top" alt="Шторы-Плиссе">
+            <div class="card-body text-center">
+              <h5 class="card-title">Шторы-Плиссе</h5>
+            </div>
+            <ul class="list-group list-group-horizontal-md list-group-flush text-center">
+              <li class="list-group-item"><b>400</b> вариантов тканей</li>
+              <li class="list-group-item"><b>3 года</b> честной гарантии</li>
+              <li class="list-group-item"><b>от 1 дня</b> на замер и установку</li>
+            </ul>
+            <div class="card-body form-row text-center">
+              <div class="form-group col-6">
+                <input type="text"
+                       class="form-control"
+                       title="Введите ваше имя"
+                       size="20"
+                       placeholder="Ваше имя"
+                       autocomplete="on">
+              </div>
+              <div class="form-group col-6">
+                <button type="button" class="btn btn-warning btn-block">заказать</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+<section id="quality-section">
+
+  <div class="container quality-section-main">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>
+          <img src="img/logo.png" alt="logo">
+          <span>Качество - наше главное преимущество!</span>
+        </h2>
+
+        <p>
+          Ключевые особенности нашей работы <br/>
+          или почему мы <b>даем пожизненную гарантию </b>на монтаж и <b>3 года расширенной гарантии</b> на материалы
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row quality-section-navigation">
+
+      <div class="col-4 offset-md-1 col-md-2">
+        <div class="list-group justify-content-end" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action active"
+             id="list-montagniki-list"
+             data-toggle="list"
+             href="#list-montagniki"
+             role="tab">Монтажники</a>
+          <a class="list-group-item list-group-item-action"
+             id="list-instrument-list"
+             data-toggle="list"
+             href="#list-instrument"
+             role="tab">Инструмент</a>
+          <a class="list-group-item list-group-item-action"
+             id="list-production-list"
+             data-toggle="list"
+             href="#list-production"
+             role="tab">Производство</a>
+          <a class="list-group-item list-group-item-action"
+             id="list-materials-list"
+             data-toggle="list"
+             href="#list-materials"
+             role="tab">Материалы</a>
+          <a class="list-group-item list-group-item-action"
+             id="list-service-list"
+             data-toggle="list"
+             href="#list-service"
+             role="tab">Сервис</a>
+        </div>
+      </div>
+      <div class="col-8 col-md-9">
+        <div class="tab-content" id="nav-tabContent">
+
+          <div class="tab-pane fade show active"
+               id="list-montagniki"
+               role="tabpanel"
+               aria-labelledby="list-montagniki-list">
+
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-sm-6">
+                  <img src="img/plus1.png" class="card-img" alt="montagniki">
+                </div>
+                <div class="col-sm-6">
+                  <div class="card-body">
+                    <p class="card-text">Вежливые монтажники с опытом работы <b>от 5 лет</b><br/></p>
+                    <p class="card-text">Собственный курс обучения монтажников, регулярные проверки качества и
+                      профессиональные навыки наших специалистов позволят нам сделать пожизненную гарантию на
+                      монтаж.</p>
+                    <h5 class="card-title">Наш выбор - доверие клиентов.</h5>
+                    <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade"
+               id="list-instrument"
+               role="tabpanel"
+               aria-labelledby="list-instrument-list">
+
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-sm-6">
+                  <img src="img/plus2.png" class="card-img" alt="instrument">
+                </div>
+                <div class="col-sm-6">
+                  <div class="card-body">
+                    <p class="card-text"><b>Профессиональный инструмент</b><br/></p>
+                    <p class="card-text">В своей работе мы используем только качественный инструмент от лучшего
+                      строительного бренда Bosch</p>
+                    <h5 class="card-title">Наш выбор - профессионализм.</h5>
+                    <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade"
+               id="list-production"
+               role="tabpanel"
+               aria-labelledby="list-production-list">
+
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-sm-6">
+                  <img src="img/plus3.png" class="card-img" alt="production">
+                </div>
+                <div class="col-sm-6">
+                  <div class="card-body">
+                    <p class="card-text"><b>Собственное производство</b> с европейским оборудованием<br/></p>
+                    <p class="card-text">Мы не перепродаем рольшторы и жалюзи. Благодаря собственному производству, мы
+                      предлагаем вам цену ниже на 20% средней по рынку.</p>
+                    <h5 class="card-title">Наш выбор - честные цены.</h5>
+                    <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade"
+               id="list-materials"
+               role="tabpanel"
+               aria-labelledby="list-materials-list">
+
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-sm-6">
+                  <img src="img/plus4.png" class="card-img" alt="materials">
+                </div>
+                <div class="col-sm-6">
+                  <div class="card-body">
+                    <p class="card-text"><b>Экологичные материалы</b> от топовых европейских производителей<br/></p>
+                    <p class="card-text">Мы закупаем материалы только у проверенных производителей из Германии, Италии,
+                      Польши и России. Мы намеренно отказываемся от дешевых и некачественных материалов из Китая,
+                      которые
+                      заполонили белорусский рынок.</p>
+                    <h5 class="card-title">Наш выбор - качество.</h5>
+                    <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade"
+               id="list-service"
+               role="tabpanel"
+               aria-labelledby="list-service-list">
+
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-sm-6">
+                  <img src="img/plus5.png" class="card-img" alt="materials">
+                </div>
+                <div class="col-sm-6">
+                  <div class="card-body">
+                    <p class="card-text"><b>Сервис высшего уровня</b><br/></p>
+                    <p class="card-text">Мы бесплатно приезжаем на замер с каталогами и образцами к вам на объект,
+                      бесплатно делаем замеры и предлагаем решение в нескольких ценовых категориях. После этого
+                      производим
+                      ваши шторы и бесплатно устанавливаем. Вы платите только за производство.</p>
+                    <h5 class="card-title">Наш выбор - идеальный сервис без переплат.</h5>
+                    <!--<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews-section">
+
+  <div class="container reviews-section-main">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>
+          <img src="img/logo.png" alt="logo">
+          <span>Отзывы наших клиентов</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row reviews-section-navigation">
+
+      <div class="col-xs-12">
+
+        <div class="accordion" id="reviews-accordion">
+          <!--Иван, Минск-->
+          <div class="card">
+            <div class="card-header" id="headingOne">
+
+              <h5 class="mb-0">
+                <button class="btn btn-link btn-block text-left"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne">
+                  Иван, Минск
+                </button>
+              </h5>
+
+            </div>
+            <!--Иван, Минск date-->
+            <div id="collapseOne"
+                 class="collapse show"
+                 aria-labelledby="headingOne"
+                 data-parent="#reviews-accordion">
+              <div class="card-body row">
+
+                <div class="col-sm-12 col-md-4">
+
+                  <div class="card mb-3">
+                    <div class="row no-gutters">
+                      <div class="col-lg-5">
+                        <img src="img/avatar1.jpg" class="card-img" alt="Ivan-Minsk">
+                      </div>
+                      <div class="col-lg-7">
+                        <div class="card-body">
+                          <p class="card-text">Очень понравились своим подходом! Выбирали жалюзи на 3 окна, получили
+                            очень хорошую консультацию, хорошую скидку. Заказ был готов уже на второй день. Все очень
+                            понравилось. Смело рекомендую Jaluzi5!</p>
+                          <h5 class="card-title">Иван, Минск</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-sm-12 col-md-8">
+                  <div class="video" align="center">
+                    <iframe src="https://www.youtube.com/embed/--GnK8XkrSE"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!--Павел, Гродно-->
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo">
+                  Павел, Гродно
+                </button>
+              </h5>
+            </div>
+            <!--Павел, Гродно, date-->
+            <div id="collapseTwo"
+                 class="collapse"
+                 aria-labelledby="headingTwo"
+                 data-parent="#reviews-accordion">
+              <div class="card-body row">
+
+                <div class="col-sm-12 col-md-4">
+
+                  <div class="card mb-3">
+                    <div class="row no-gutters">
+                      <div class="col-lg-5">
+                        <img src="img/avatar2.jpg" class="card-img" alt="Pavel-Grodno">
+                      </div>
+                      <div class="col-lg-7">
+                        <div class="card-body">
+                          <p class="card-text">Ребята предложили мне на балкон шторы День-Ночь и подобрали цвет под
+                            стены балкона. Очень мне пришлись по нраву. Приятно наблюдать, как это все выглядит теперь.
+                            Спасибо!</p>
+                          <h5 class="card-title">Павел, Гродно</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-sm-12 col-md-8">
+                  <div class="video" align="center">
+                    <iframe src="https://www.youtube.com/embed/zfs0iGhMDF4"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!--Александр, Минск-->
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree">
+                  Александр, Минск
+                </button>
+              </h5>
+            </div>
+            <!--Александр, Минск, date-->
+            <div id="collapseThree"
+                 class="collapse"
+                 aria-labelledby="headingThree"
+                 data-parent="#reviews-accordion">
+              <div class="card-body row">
+
+                <div class="col-sm-12 col-md-4">
+
+                  <div class="card mb-3">
+                    <div class="row no-gutters">
+                      <div class="col-lg-5">
+                        <img src="img/avatar3.jpg" class="card-img" alt="Alexandr-Minsk">
+                      </div>
+                      <div class="col-lg-7">
+                        <div class="card-body">
+                          <p class="card-text">Просто потрясающе, очень доволен ребятами! Было очень сложно найти
+                            компанию, которая сможет взяться за мой заказ из-за выступающей балки. Ребята без проблем
+                            взялись за заказ. В оговоренное время приехали, померяли все. Сделали все за пару дней,
+                            привезли и установили. Буду всем вас рекомендовать!</p>
+                          <h5 class="card-title">Александр, Минск</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-sm-12 col-md-8">
+                  <div class="video" align="center">
+                    <iframe src="https://www.youtube.com/embed/BPG41fJCbOg"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <!--Дмитрий, Минск-->
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour">
+                  Дмитрий, Минск
+                </button>
+              </h5>
+            </div>
+            <!--Дмитрий, Минск, date-->
+            <div id="collapseFour"
+                 class="collapse"
+                 aria-labelledby="headingFour"
+                 data-parent="#reviews-accordion">
+              <div class="card-body row">
+
+                <div class="col-sm-12 col-md-4">
+
+                  <div class="card mb-3">
+                    <div class="row no-gutters">
+                      <div class="col-lg-5">
+                        <img src="img/avatar4.jpg" class="card-img" alt="Dmitrij-Minsk">
+                      </div>
+                      <div class="col-lg-7">
+                        <div class="card-body">
+                          <p class="card-text">Обращаюсь не в первый раз. Год назад заказывал рольшторы домой. Теперь
+                            понадобились вертикальные жалюзи в офис. От оформления заказа до монтажа - все сделали очень
+                            оперативно. Спасибо монтажнику Илье, который все сделал очень аккуратно и без мусора.
+                            Спасибо!</p>
+                          <h5 class="card-title">Дмитрий, Минск</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-sm-12 col-md-8">
+                  <div class="video" align="center">
+                    <iframe src="https://www.youtube.com/embed/YbomHa9wVFQ"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+
+                    </iframe>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</section>
+
+<section id="production-photo-section">
+
+  <div class="container production-section-main">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>
+          <img src="img/logo.png" alt="logo">
+          <span>Фото с производства</span>
+        </h2>
+
+        <p>
+          Мы предлагаем только продукцию высшего качества, ведь у нас работает высококвалифицированный и ответственный
+          персонал.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="production-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" align="center">
+        <img src="img/production1.jpg" class="d-block mx-auto w-75" alt="Production-photo-1">
+      </div>
+      <div class="carousel-item">
+        <img src="img/production2.jpg" class="d-block mx-auto w-75" alt="Production-photo-2">
+      </div>
+      <div class="carousel-item">
+        <img src="img/production3.jpg" class="d-block mx-auto w-75" alt="Production-photo-3">
+      </div>
+      <div class="carousel-item">
+        <img src="img/production4.jpg" class="d-block mx-auto w-75" alt="Production-photo-4">
+      </div>
+      <div class="carousel-item">
+        <img src="img/production5.jpg" class="d-block mx-auto w-75" alt="Production-photo-5">
+      </div>
+      <div class="carousel-item">
+        <img src="img/production6.jpg" class="d-block mx-auto w-75" alt="Production-photo-6">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#production-carousel" role="button" data-slide="prev">
+      <span class="icon-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#production-carousel" role="button" data-slide="next">
+      <span class="icon-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+</section>
+
+<section id="contact-section">
+
+  <div class="container">
+
+    <div class="row contact-section-header">
+      <div class="col-xs-12">
+        <h2>
+          <img src="img/logo.png" alt="logo">
+          <span>Остались вопросы?</span>
+        </h2>
+        <p>
+          Свяжитесь с нами любым удобным способом и не забудьте упомянуть, что Вы с сайта. <b>За это вы получите скидку
+          от 5 до 15%</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="row contact-section-main">
+      <div class="col-sm-6 col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Наши контакты</h5>
+            <ul>
+              <li><i class="icon-location">ул. Карского, 8, Гродно, Беларусь</i></li>
+              <li><i class="icon-phone"><a href="tel:+375293322943">+375 (29) 332 29 43</a></i></li>
+              <li><i class="icon-phone"><a href="tel:+375293322943">+375 (29) 332 29 43</a></i></li>
+              <li><i class="icon-phone"><a href="tel:+375293322943">+375 (29) 332 29 43</a></i></li>
+              <li><i class="fab fa-viber"></i><a href="viber://add?number=375295691865">+375 (29) 569-18-65 </a>
+                <b> Viber</b>
+              </li>
+              <li><i class="icon-at"><a href="mailto:info@jaluzi5.by">info@jaluzi5.by</a></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-8">
+
+        <div class="map" align="center">
+          <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad943cfca8ac49cf2f5db591cf239cc0f600ab413b3c4abf4da09ea77a5874798&amp;source=constructor"
+              frameborder="0">
+
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row contact-section-footer">
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="logo">
+          <a href="#first">
+            <img src="img/logo.png" alt="logo">
+            <span>JALUZI5</span>
+            <p>
+              Производим , продаем и устанавливаем <br/>
+              рольшторы и жалюзи в Минске
+            </p>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="get-a-call">
+          <a href="#contact-section">
+            <!--<object type="image/svg+xml" data="img/svg/telephone.svg" id="header-phone"></object>-->
+            <svg x="0px" y="0px" viewBox="0 0 512 512">
+              <path d="M389.3,338.7c-16.7-16.5-37.6-16.5-54.2,0c-12.7,12.6-25.4,25.1-37.8,37.9c-3.4,3.5-6.3,4.3-10.4,1.9
+			c-8.2-4.5-16.9-8.1-24.8-13c-36.8-23.1-67.5-52.8-94.8-86.3c-13.5-16.6-25.6-34.4-34-54.4c-1.7-4-1.4-6.7,1.9-10
+			c12.7-12.3,25-24.8,37.5-37.4c17.4-17.5,17.4-37.9-0.1-55.5c-9.9-10-19.8-19.8-29.7-29.8c-10.2-10.2-20.3-20.6-30.7-30.7
+			c-16.7-16.3-37.6-16.3-54.2,0.1C45,74,32.8,86.9,19.8,99.3C7.7,110.7,1.7,124.7,0.4,141c-2,26.5,4.5,51.6,13.6,76
+			c18.8,50.5,47.3,95.4,81.9,136.5C142.7,409,198.5,453,263.9,484.8c29.4,14.3,59.9,25.3,93,27.1c22.8,1.3,42.6-4.5,58.5-22.3
+			c10.9-12.1,23.1-23.2,34.6-34.8c17-17.3,17.2-38.1,0.2-55.2C430,379.2,409.6,358.9,389.3,338.7z"/>
+              <path d="M368.9,253.8l39.3-6.7c-6.2-36.1-23.2-68.8-49.1-94.8c-27.4-27.4-62-44.6-100.1-50l-5.5,39.5
+			c29.5,4.2,56.4,17.5,77.6,38.7C351,200.5,364.1,225.9,368.9,253.8z"/>
+              <path d="M430.4,82.9C385,37.5,327.6,8.8,264.2,0l-5.5,39.5C313.4,47.2,363,72,402.3,111.1c37.2,37.2,61.6,84.2,70.4,135.8
+			l39.3-6.7C501.7,180.4,473.4,126,430.4,82.9z"/>
+            </svg>
+            <span>заказать звонок</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="contact-information">
+          <p>с 9:00 до 21:00 ежедневно</p>
+          <a href="tel:+375293322943">+375 (29) 332 29 43</a><br/>
+          <a href="tel:+375333522943">+375 (33) 352 29 43</a>
+        </div>
+      </div>
+
+      <div class="col-xs-12 text-right social-block">
+        <ul>
+          <li><i class="icon-facebook-1"></i></li>
+          <li><i class="icon-twitter"></i></li>
+          <li><i class="icon-linkedin"></i></li>
+          <li><i class="icon-skype"></i></li>
+          <li><i class="icon-youtube"></i></li>
+        </ul>
+      </div>
+
+      <div class="col-12 text-center">
+        <span class="rights-reserved">&copy; 2019 JALUZI5 All Rigts reserved</span><br/>
+        <br/>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="" id="button-up">
+  <i class="icon-angle-double-up"></i>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="js/form-script.js"></script>
+<script src="js/buton-up.js"></script>
+
+</body>
+
+</html>
